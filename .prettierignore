@@ -1,0 +1,7 @@
+.husky
+.nuxt
+.nitro
+.cache
+.output
+dist
+*.json
