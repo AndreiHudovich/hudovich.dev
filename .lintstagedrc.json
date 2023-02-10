@@ -1,4 +1,4 @@
 {
-  "**/*.{ts,vue}": ["npm run typecheck"],
-  "**/*.{js,ts,vue}": ["npm run lint", "npm run prettier"]
+  "**/*.{ts,vue}": ["npm run check-types"],
+  "**/*.{js,ts,vue}": ["npm run check-lint", "npm run check-format"]
 }

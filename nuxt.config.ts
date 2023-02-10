@@ -5,7 +5,10 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  css: ['@/assets/styles/main.scss'],
+  css: [
+    '@/assets/styles/main.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   components: [
     {
       path: '@/components',
@@ -36,6 +39,11 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
+            @use 'sass-mq/mq' as * with (
+              $breakpoints: (
+                md: 768px
+              )
+            );
             @use "@/assets/styles/utilities/_functions.scss" as *;
             @use "@/assets/styles/utilities/_mixins.scss" as *;
           `

@@ -1,0 +1,200 @@
+<template>
+  <nav ref="navRef" class="nav" :class="isOpen && 'js-open'">
+    <div class="nav__container">
+      <ul class="nav__list">
+        <li v-for="item in navLinks.header" :key="item.label" class="nav__item">
+          <NuxtLink class="nav__link" :to="item.href">
+            {{ item.label }}
+          </NuxtLink>
+        </li>
+      </ul>
+
+      <ul class="nav-meta">
+        <li class="nav-meta__item">
+          <a
+            class="nav-meta__link"
+            :href="metadata.social.twitter"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              class="nav-meta__icon nav-meta__icon--twitter"
+              icon="fa-brands fa-twitter"
+            />
+          </a>
+        </li>
+
+        <li class="nav-meta__item">
+          <a
+            class="nav-meta__link"
+            :href="metadata.social.github"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              class="nav-meta__icon nav-meta__icon--github"
+              icon="fa-brands fa-github"
+            />
+          </a>
+        </li>
+
+        <li class="nav-meta__item">
+          <button class="nav-meta__link" type="button">
+            <FontAwesomeIcon
+              class="nav-meta__icon nav-meta__icon--mode"
+              icon="fa-solid fa-circle-half-stroke"
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</template>
+
+<script setup lang="ts">
+import navLinks from '@/data/navLinks'
+import metadata from '@/data/metadata'
+
+defineProps<{
+  isOpen: boolean
+}>()
+
+const navRef = ref<HTMLElement | null>(null)
+
+useBodyScrollLock(navRef)
+</script>
+
+<style scoped lang="scss">
+.nav {
+  position: fixed;
+  inset: 0;
+  z-index: var(--mobile-nav-z-index);
+  visibility: hidden;
+  display: grid;
+  overflow: auto;
+  padding-top: toRem(64px);
+  padding-bottom: toRem(64px);
+  background-color: var(--orange-color);
+
+  &.js-open {
+    visibility: visible;
+  }
+
+  @include mq($from: md) {
+    position: static;
+    visibility: visible;
+    display: block;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+
+  &__container {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    @include mq($from: md) {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(32px);
+    margin-top: 0;
+    margin-bottom: toRem(48px);
+    padding-left: 0;
+    list-style-type: none;
+
+    @include mq($from: md) {
+      flex-direction: row;
+      gap: toRem(48px);
+      margin-bottom: 0;
+      margin-right: toRem(48px);
+    }
+  }
+
+  &__link {
+    display: block;
+    color: var(--blue-color);
+    font-size: toRem(24px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include mq($from: md) {
+      font-size: toRem(16px);
+    }
+  }
+}
+
+.nav-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(24px);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+
+  @include mq($from: md) {
+    gap: toRem(20px);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: toRem(36px);
+    height: toRem(36px);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    @include mq($from: md) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__icon {
+    display: block;
+    color: var(--blue-color);
+
+    &--twitter {
+      width: toRem(33px);
+      height: toRem(27px);
+
+      @include mq($from: md) {
+        width: toRem(28px);
+        height: toRem(23px);
+      }
+    }
+
+    &--github {
+      width: toRem(27px);
+      height: toRem(27px);
+    }
+
+    &--mode {
+      width: toRem(26px);
+      height: toRem(26px);
+    }
+
+    &--github,
+    &--mode {
+      @include mq($from: md) {
+        width: toRem(22px);
+        height: toRem(22px);
+      }
+    }
+  }
+}
+</style>
