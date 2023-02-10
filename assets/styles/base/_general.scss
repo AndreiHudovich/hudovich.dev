@@ -1,3 +1,7 @@
+@use '@/assets/styles/utilities/_functions.scss' as *;
+
 body {
+  background-color: var(--page-bg-color);
   font-family: var(--base-font-family);
+  font-size: toRem(18px);
 }

@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
+  css: ['@/assets/styles/main.scss'],
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
@@ -22,6 +23,18 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap'
         }
       ]
+    }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "@/assets/styles/utilities/_functions.scss" as *;
+            @use "@/assets/styles/utilities/_mixins.scss" as *;
+          `
+        }
+      }
     }
   }
 })

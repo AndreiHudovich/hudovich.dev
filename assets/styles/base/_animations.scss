@@ -1,0 +1,10 @@
+@keyframes heartBeat {
+  0%,
+  90% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15);
+  }
+}
