@@ -1,18 +1,20 @@
 <template>
   <header class="header">
-    <a class="header__logo" href="/">
-      <BaseLogo />
-    </a>
+    <BaseContainer class="header__container" fluid>
+      <a class="header__logo" href="/">
+        <BaseLogo />
+      </a>
 
-    <TheNavigation :is-open="state.isOpen" />
+      <TheNavigation :is-open="state.isOpen" />
 
-    <button
-      class="header__hamburger-btn"
-      type="button"
-      @click="toggleNavigation"
-    >
-      <FontAwesomeIcon icon="fa-solid fa-bars" />
-    </button>
+      <button
+        class="header__hamburger-btn"
+        type="button"
+        @click="toggleNavigation"
+      >
+        <FontAwesomeIcon icon="fa-solid fa-bars" />
+      </button>
+    </BaseContainer>
   </header>
 </template>
 
@@ -30,17 +32,15 @@ function toggleNavigation() {
 
 <style scoped lang="scss">
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: toRem(24px);
-  padding-right: toRem(24px);
-  height: toRem(80px);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: toRem(80px);
 
-  @include mq($from: md) {
-    padding-left: toRem(48px);
-    padding-right: toRem(48px);
-    height: toRem(100px);
+    @include mq($from: md) {
+      height: toRem(100px);
+    }
   }
 
   &__logo {

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer__illustration">
+    <BaseContainer class="footer__illustration" fluid>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 71">
         <path
           fill="#44425C"
@@ -28,9 +28,9 @@
           clip-rule="evenodd"
         ></path>
       </svg>
-    </div>
+    </BaseContainer>
 
-    <div class="footer__container">
+    <BaseContainer class="footer__container" fluid>
       <ul class="footer-nav">
         <li
           v-for="item in navLinks.footer"
@@ -52,7 +52,7 @@
         <FontAwesomeIcon icon="fa-solid fa-heart" />
         by Andrei Hudovich
       </p>
-    </div>
+    </BaseContainer>
   </footer>
 </template>
 
@@ -68,14 +68,7 @@ import navLinks from '@/data/navLinks'
   &__illustration {
     display: flex;
     justify-content: flex-end;
-    padding-left: toRem(24px);
-    padding-right: toRem(24px);
     border-bottom: 1px solid var(--grey-color);
-
-    @include mq($from: md) {
-      padding-left: toRem(48px);
-      padding-right: toRem(48px);
-    }
 
     & > svg {
       margin-bottom: toRem(-2px);
@@ -90,15 +83,11 @@ import navLinks from '@/data/navLinks'
     justify-content: center;
     align-items: center;
     gap: toRem(20px);
-    padding-left: toRem(24px);
-    padding-right: toRem(24px);
     height: toRem(112px);
 
     @include mq($from: md) {
       flex-direction: row-reverse;
       justify-content: space-between;
-      padding-left: toRem(48px);
-      padding-right: toRem(48px);
       height: toRem(80px);
     }
   }
