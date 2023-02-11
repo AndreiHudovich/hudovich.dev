@@ -50,16 +50,26 @@
 </template>
 
 <script setup lang="ts">
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import navLinks from '@/data/navLinks'
 import metadata from '@/data/metadata'
 
-defineProps<{
+const props = defineProps<{
   isOpen: boolean
 }>()
 
 const navRef = ref<HTMLElement | null>(null)
 
-useBodyScrollLock(navRef)
+watch(
+  () => props.isOpen,
+  (newIsOpen) => {
+    if (navRef.value) {
+      newIsOpen
+        ? disableBodyScroll(navRef.value)
+        : enableBodyScroll(navRef.value)
+    }
+  }
+)
 </script>
 
 <style scoped lang="scss">
