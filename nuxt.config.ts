@@ -50,7 +50,11 @@ export default defineNuxtConfig({
           additionalData: `
             @use 'sass-mq/mq' as * with (
               $breakpoints: (
-                md: 768px
+                sm: 576px,
+                md: 768px,
+                lg: 1024px,
+                xl: 1280px,
+                container: 1120px,
               )
             );
             @use "@/assets/styles/utilities/_functions.scss" as *;

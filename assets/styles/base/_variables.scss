@@ -37,6 +37,9 @@
   // Specific Colors
   --page-bg-color: hsl(var(--orange-h) var(--orange-s) var(--orange-l) / 0.05);
 
+  // Forms
+  --control-radius: 0.5rem; // 8px
+
   // Z-indexes
   --mobile-nav-z-index: 100;
 }
