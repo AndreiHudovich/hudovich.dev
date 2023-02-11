@@ -193,6 +193,8 @@
 
 <style scoped lang="scss">
 .section {
+  margin-bottom: var(--section-padding-y-md);
+
   &__container {
     @include mq($from: lg) {
       position: relative;

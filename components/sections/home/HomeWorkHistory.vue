@@ -120,6 +120,8 @@ const currentDate = computed(() => {
 
 <style scoped lang="scss">
 .section {
+  margin-bottom: var(--section-padding-y-sm);
+
   &__header {
     margin-bottom: toRem(32px);
 

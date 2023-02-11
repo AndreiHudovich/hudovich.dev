@@ -1,3 +1,5 @@
+@use 'sass-mq/mq' as *;
+
 :root {
   // Fonts
   --base-font-family: 'Inter', sans-serif;
@@ -42,4 +44,13 @@
 
   // Z-indexes
   --mobile-nav-z-index: 100;
+
+  // Spacing
+  --section-padding-y-sm: 2rem; // 32px
+  --section-padding-y-md: 4rem; // 64px
+
+  @include mq($from: md) {
+    --section-padding-y-sm: 2.75rem; // 44px
+    --section-padding-y-md: 5.5rem; // 88px
+  }
 }

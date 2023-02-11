@@ -32,6 +32,8 @@ function toggleNavigation() {
 
 <style scoped lang="scss">
 .header {
+  margin-bottom: var(--section-padding-y-sm);
+
   &__container {
     display: flex;
     align-items: center;

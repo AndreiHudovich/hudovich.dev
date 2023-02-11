@@ -157,6 +157,8 @@
 
 <style scoped lang="scss">
 .section {
+  margin-bottom: var(--section-padding-y-md);
+
   &__header {
     margin-bottom: toRem(38px);
 
