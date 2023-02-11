@@ -1,0 +1,12 @@
+@use 'sass-mq/mq' as *;
+@use 'functions.scss' as *;
+
+@mixin heading-level-2 {
+  font-size: toRem(32px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  @include mq($from: md) {
+    font-size: toRem(42px);
+  }
+}

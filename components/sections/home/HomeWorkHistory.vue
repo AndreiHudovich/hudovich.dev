@@ -129,15 +129,9 @@ const currentDate = computed(() => {
   }
 
   &__heading {
+    @include heading-level-2;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: toRem(32px);
-    font-weight: 700;
-    line-height: 1.2;
-
-    @include mq($from: md) {
-      font-size: toRem(42px);
-    }
   }
 
   &__body {
