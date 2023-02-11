@@ -48,7 +48,7 @@
       </ul>
 
       <p class="footer__copyright">
-        &copy; 2023 Built with
+        &copy; {{ currentYear }} Built with
         <FontAwesomeIcon icon="fa-solid fa-heart" />
         by Andrei Hudovich
       </p>
@@ -58,6 +58,11 @@
 
 <script setup lang="ts">
 import navLinks from '@/data/navLinks'
+
+const currentYear = computed(() => {
+  const today = new Date()
+  return today.getFullYear()
+})
 </script>
 
 <style scoped lang="scss">
