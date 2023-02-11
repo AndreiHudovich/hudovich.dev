@@ -206,10 +206,11 @@
     margin-top: 0;
     margin-bottom: toRem(12px);
     font-size: clamp(toRem(32px), 4vw + 1rem, toRem(60px));
-    line-height: 1.25;
+    line-height: 1.33;
 
     @include mq($from: md) {
       margin-bottom: toRem(24px);
+      line-height: 1.25;
     }
 
     @include mq($from: lg) {
