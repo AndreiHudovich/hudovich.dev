@@ -10,3 +10,9 @@
     font-size: toRem(42px);
   }
 }
+
+@mixin dark-theme {
+  html.dark & {
+    @content;
+  }
+}
