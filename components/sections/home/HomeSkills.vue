@@ -1,17 +1,16 @@
 <template>
   <section class="section">
     <BaseContainer>
-      <header class="section__header">
-        <h2 class="section__heading">Skills</h2>
-
-        <p class="section__intro">
+      <BaseSectionHeader>
+        <template #heading>Skills</template>
+        <template #intro>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quasi
           labore cum nesciunt mollitia exercitationem odio, fuga explicabo totam
           id corrupti ducimus magnam minima rerum eum alias modi error obcaecati
           natus, <a href="#">repudiandae</a> unde ad vel
           <a href="#">cupiditate</a> soluta.
-        </p>
-      </header>
+        </template>
+      </BaseSectionHeader>
 
       <div class="section__body">
         <article class="section-card">
@@ -158,32 +157,6 @@
 <style scoped lang="scss">
 .section {
   margin-bottom: var(--section-padding-y-md);
-
-  &__header {
-    margin-bottom: toRem(38px);
-
-    @include mq($from: md) {
-      margin-bottom: toRem(48px);
-    }
-  }
-
-  &__heading {
-    @include heading-level-2;
-    margin-top: 0;
-    margin-bottom: toRem(18px);
-  }
-
-  &__intro {
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: toRem(1024px);
-    font-size: toRem(19px);
-    line-height: 1.7;
-
-    @include mq($from: lg) {
-      font-size: toRem(22px);
-    }
-  }
 
   &__body {
     display: grid;

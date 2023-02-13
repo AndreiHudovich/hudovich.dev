@@ -1,9 +1,14 @@
 <template>
   <section class="section">
     <BaseContainer>
-      <header class="section__header">
-        <h2 class="section__heading">Work History</h2>
-      </header>
+      <BaseSectionHeader>
+        <template #heading>Work History</template>
+        <template #intro>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quasi
+          labore cum nesciunt mollitia exercitationem odio, modi error obcaecati
+          <a href="#" download>natus repudiandae</a>.
+        </template>
+      </BaseSectionHeader>
 
       <div class="section__body">
         <article class="section-card">
@@ -121,20 +126,6 @@ const currentDate = computed(() => {
 <style scoped lang="scss">
 .section {
   margin-bottom: var(--section-padding-y-sm);
-
-  &__header {
-    margin-bottom: toRem(32px);
-
-    @include mq($from: md) {
-      margin-bottom: toRem(48px);
-    }
-  }
-
-  &__heading {
-    @include heading-level-2;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 
   &__body {
     position: relative;
