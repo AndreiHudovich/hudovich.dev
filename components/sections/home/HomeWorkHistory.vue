@@ -28,11 +28,14 @@
             </div>
           </div>
 
-          <p class="section-card__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            impedit officiis dolorem? Minima eveniet sint, incidunt culpa
-            quisquam beatae architecto ullam vel earum quibusdam quia.
-          </p>
+          <ul class="section-card__description">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>
+              Nesciunt repellendus esse vel cupiditate tempore accusantium
+              quisquam beatae ipsam.
+            </li>
+            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+          </ul>
         </article>
 
         <article class="section-card">
@@ -53,11 +56,14 @@
             </div>
           </div>
 
-          <p class="section-card__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            impedit officiis dolorem? Minima eveniet sint, incidunt culpa
-            quisquam beatae architecto ullam vel earum quibusdam quia.
-          </p>
+          <ul class="section-card__description">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>
+              Nesciunt repellendus esse vel cupiditate tempore accusantium
+              quisquam beatae ipsam.
+            </li>
+            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+          </ul>
         </article>
 
         <article class="section-card">
@@ -78,11 +84,14 @@
             </div>
           </div>
 
-          <p class="section-card__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            impedit officiis dolorem? Minima eveniet sint, incidunt culpa
-            quisquam beatae architecto ullam vel earum quibusdam quia.
-          </p>
+          <ul class="section-card__description">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>
+              Nesciunt repellendus esse vel cupiditate tempore accusantium
+              quisquam beatae ipsam.
+            </li>
+            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+          </ul>
         </article>
 
         <article class="section-card">
@@ -103,11 +112,14 @@
             </div>
           </div>
 
-          <p class="section-card__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            impedit officiis dolorem? Minima eveniet sint, incidunt culpa
-            quisquam beatae architecto ullam vel earum quibusdam quia.
-          </p>
+          <ul class="section-card__description">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>
+              Nesciunt repellendus esse vel cupiditate tempore accusantium
+              quisquam beatae ipsam.
+            </li>
+            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+          </ul>
         </article>
       </div>
     </BaseContainer>
@@ -237,9 +249,30 @@ const currentDate = computed(() => {
   }
 
   &__description {
+    display: grid;
+    gap: toRem(8px);
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
     line-height: 1.7;
+
+    li {
+      position: relative;
+      padding-left: toRem(16px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(((toRem(18px) * 1.7) - toRem(6px)) / 2);
+        left: 0;
+        width: toRem(6px);
+        height: toRem(6px);
+        background-color: var(--blue-color);
+        border-radius: 50%;
+        opacity: 0.75;
+      }
+    }
   }
 }
 </style>
