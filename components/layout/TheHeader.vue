@@ -5,7 +5,10 @@
         <BaseLogo />
       </NuxtLink>
 
-      <TheNavigation :is-open="state.isOpen" @link-clicked="toggleNavigation" />
+      <TheNavigation
+        :is-open="state.isOpen"
+        @link-clicked="state.isOpen = false"
+      />
 
       <button
         class="header__hamburger-btn"
