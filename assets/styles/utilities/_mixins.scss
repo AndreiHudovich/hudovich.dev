@@ -4,10 +4,22 @@
 @mixin heading-level-2 {
   font-size: toRem(32px);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.5;
 
   @include mq($from: md) {
     font-size: toRem(42px);
+  }
+}
+
+// TODO: Replace with `margin-trim` when it will be implemented by browsers
+// https://developer.mozilla.org/en-US/docs/Web/CSS/margin-trim
+@mixin margin-trim {
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
   }
 }
 

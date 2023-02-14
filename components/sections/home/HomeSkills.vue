@@ -4,11 +4,13 @@
       <BaseSectionHeader>
         <template #heading>Skills</template>
         <template #intro>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quasi
-          labore cum nesciunt mollitia exercitationem odio, fuga explicabo totam
-          id corrupti ducimus magnam minima rerum eum alias modi error obcaecati
-          natus, <a href="#">repudiandae</a> unde ad vel
-          <a href="#">cupiditate</a> soluta.
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+            quasi labore cum nesciunt mollitia exercitationem odio, fuga
+            explicabo totam id corrupti ducimus magnam minima rerum eum alias
+            modi error obcaecati natus, <a href="#">repudiandae</a> unde ad vel
+            <a href="#">cupiditate</a> soluta.
+          </p>
         </template>
       </BaseSectionHeader>
 

@@ -4,9 +4,9 @@
       <slot name="heading"></slot>
     </h2>
 
-    <p class="section-header__intro">
+    <div class="section-header__intro">
       <slot name="intro"></slot>
-    </p>
+    </div>
   </header>
 </template>
 
@@ -21,12 +21,11 @@
   &__heading {
     @include heading-level-2;
     margin-top: 0;
-    margin-bottom: toRem(18px);
+    margin-bottom: toRem(12px);
   }
 
   &__intro {
-    margin-top: 0;
-    margin-bottom: 0;
+    @include margin-trim;
     max-width: toRem(1024px);
     font-size: toRem(19px);
     line-height: 1.7;

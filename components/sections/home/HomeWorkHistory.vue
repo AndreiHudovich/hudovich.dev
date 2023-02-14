@@ -4,9 +4,12 @@
       <BaseSectionHeader>
         <template #heading>Work History</template>
         <template #intro>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quasi
-          labore cum nesciunt mollitia exercitationem odio, modi error obcaecati
-          <a href="#" download>natus repudiandae</a>.
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+            quasi labore cum nesciunt mollitia exercitationem odio, modi error
+            obcaecati
+            <a href="#" download>natus repudiandae</a>.
+          </p>
         </template>
       </BaseSectionHeader>
 
