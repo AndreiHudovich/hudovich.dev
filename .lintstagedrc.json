@@ -1,4 +1,0 @@
-{
-  "**/*.{ts,vue}": ["npm run typecheck"],
-  "**/*.{js,ts,vue}": ["npm run lint", "npm run prettier"]
-}

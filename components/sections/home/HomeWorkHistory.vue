@@ -1,0 +1,324 @@
+<template>
+  <section class="section">
+    <BaseContainer>
+      <BaseSectionHeader class="section__header">
+        <template #heading>Work History</template>
+        <template #intro>
+          <p>
+            Below you will find a summary of my past employment experience.
+            Additionally, if you require, you can
+            <a href="/resume.pdf" :download="FileNames.RESUME"
+              >download my resume</a
+            >.
+          </p>
+        </template>
+      </BaseSectionHeader>
+
+      <div class="section__body">
+        <article class="section-card">
+          <div class="section-card__info">
+            <h3 class="section-card__heading">Senior Front-end Engineer</h3>
+
+            <ul class="section-card__meta">
+              <li>LolaDB</li>
+              <li>United States</li>
+              <li>Contract</li>
+            </ul>
+
+            <div class="section-card__period">
+              <time datetime="2022-06">Jun 2022</time>
+              &dash;
+              <time :datetime="currentDate">Present</time>
+            </div>
+          </div>
+
+          <ul class="section-card__description">
+            <li>
+              Worked to solve complex problems using the latest Web Standards.
+            </li>
+
+            <li>
+              Architected the product&apos;s front-end structure (Vue.js, Pinia,
+              Typescript, Vite).
+            </li>
+
+            <li>
+              Accomplished the development of the sophisticated Vue.js UI
+              components.
+            </li>
+
+            <li>Developed the open-source component library.</li>
+
+            <li>Crafted responsive marketing landing pages.</li>
+          </ul>
+        </article>
+
+        <article class="section-card">
+          <div class="section-card__info">
+            <h3 class="section-card__heading">Senior Front-end Engineer</h3>
+
+            <ul class="section-card__meta">
+              <li>Casago</li>
+              <li>United States</li>
+              <li>Full-time</li>
+            </ul>
+
+            <div class="section-card__period">
+              <time datetime="2021-10">Oct 2021</time>
+              &dash;
+              <time datetime="2022-04">Apr 2022</time>
+            </div>
+          </div>
+
+          <ul class="section-card__description">
+            <li>
+              Was one of the team members who joined the new company after
+              Nokori's acquisition.
+            </li>
+
+            <li>
+              Helped to adapt and embed the new assets into the franchise
+              ecosystem.
+            </li>
+
+            <li>
+              Developed the ground for the new project based on Vue.js
+              framework.
+            </li>
+          </ul>
+        </article>
+
+        <article class="section-card">
+          <div class="section-card__info">
+            <h3 class="section-card__heading">Senior Front-end Engineer</h3>
+
+            <ul class="section-card__meta">
+              <li>Nokori</li>
+              <li>United States</li>
+              <li>Full-time</li>
+            </ul>
+
+            <div class="section-card__period">
+              <time datetime="2020-07">Jul 2020</time>
+              &dash;
+              <time datetime="2021-10">Oct 2021</time>
+            </div>
+          </div>
+
+          <ul class="section-card__description">
+            <li>
+              Acted as a primary and sole front-end developer of the team.
+            </li>
+
+            <li>
+              Was responsible for development of the Vue.js single-page
+              application.
+            </li>
+
+            <li>Worked on responsive static marketing pages.</li>
+
+            <li>
+              Managed the migration from Vue 2 codebase to Vue 3 and Composition
+              API.
+            </li>
+          </ul>
+        </article>
+
+        <article class="section-card">
+          <div class="section-card__info">
+            <h3 class="section-card__heading">Front-end Developer</h3>
+
+            <ul class="section-card__meta">
+              <li>Freelance platforms</li>
+              <li>Worldwide</li>
+            </ul>
+
+            <div class="section-card__period">
+              <time datetime="2015-01">Jan 2015</time>
+              &dash;
+              <time datetime="2020-07">Jul 2020</time>
+            </div>
+          </div>
+
+          <ul class="section-card__description">
+            <li>
+              Kick-started my developing career as a PSD-to-HTML developer.
+            </li>
+
+            <li>
+              Helped dozens of clients around the world to build and deploy
+              their websites.
+            </li>
+
+            <li>Worked hard to meet client deadlines.</li>
+
+            <li>Matured as a self-taught senior front-end engineer.</li>
+          </ul>
+        </article>
+      </div>
+    </BaseContainer>
+  </section>
+</template>
+
+<script setup lang="ts">
+import FileNames from '@/enums/FileNames.enum'
+
+const currentDate = computed(() => {
+  const today = new Date()
+  const year = today.getFullYear()
+  const month = String(today.getMonth() + 1).padStart(2, '0')
+  return `${year}-${month}`
+})
+</script>
+
+<style scoped lang="scss">
+.section {
+  margin-bottom: var(--section-padding-y-sm);
+
+  &__header {
+    max-width: toRem(800px);
+  }
+
+  &__body {
+    position: relative;
+    display: grid;
+    gap: toRem(36px);
+    padding-left: toRem(40px);
+
+    @include mq($from: md) {
+      gap: toRem(48px);
+    }
+
+    @include mq($from: lg) {
+      padding-left: toRem(70px);
+    }
+
+    // Timeline
+    &::before {
+      content: '';
+      position: absolute;
+      top: toRem(12px);
+      bottom: 0;
+      left: toRem(7px);
+      width: toRem(2px);
+      background-color: var(--grey-color);
+    }
+  }
+}
+
+.section-card {
+  position: relative;
+  display: grid;
+  gap: toRem(18px);
+
+  &:first-child {
+    &::before {
+      box-shadow: 0 0 0 0 var(--orange-color);
+      animation: ping 1.5s ease infinite;
+    }
+  }
+
+  @include mq($from: md) {
+    grid-template-columns: toRem(280px) auto;
+    gap: toRem(48px);
+  }
+
+  @include mq($from: lg) {
+    gap: toRem(64px);
+  }
+
+  // Marker
+  &::before {
+    content: '';
+    position: absolute;
+    top: toRem(7px);
+    left: toRem(-40px);
+    width: toRem(16px);
+    height: toRem(16px);
+    background-color: var(--orange-color);
+    border-radius: 50%;
+
+    @include mq($from: lg) {
+      left: toRem(-70px);
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: toRem(6px);
+    font-size: toRem(20px);
+    font-weight: 700;
+  }
+
+  &__meta,
+  &__period {
+    font-size: toRem(16px);
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  &__meta {
+    display: flex;
+    gap: toRem(22px);
+    margin-top: 0;
+    margin-bottom: toRem(8px);
+    padding-left: 0;
+    list-style-type: none;
+
+    & > li {
+      position: relative;
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + ((toRem(22px) - toRem(6px)) / 2));
+        transform: translateY(-50%);
+        width: toRem(6px);
+        height: toRem(6px);
+        background-color: var(--blue-color);
+        border-radius: 50%;
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &__period {
+    opacity: 0.75;
+  }
+
+  &__description {
+    display: grid;
+    gap: toRem(8px);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 1.7;
+
+    li {
+      position: relative;
+      padding-left: toRem(16px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(((toRem(18px) * 1.7) - toRem(6px)) / 2);
+        left: 0;
+        width: toRem(6px);
+        height: toRem(6px);
+        background-color: var(--blue-color);
+        border-radius: 50%;
+        opacity: 0.75;
+      }
+    }
+  }
+}
+</style>

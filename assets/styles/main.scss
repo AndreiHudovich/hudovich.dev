@@ -1,9 +1,10 @@
 @charset 'utf-8';
 
+@use 'normalize.css/normalize.css';
+
 @use './utilities/functions';
 @use './utilities/mixins';
 
 @use './base/variables';
 @use './base/animations';
-@use './base/reset';
 @use './base/general';

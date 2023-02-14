@@ -1,3 +1,56 @@
+@use 'sass-mq/mq' as *;
+
 :root {
+  // Fonts
   --base-font-family: 'Inter', sans-serif;
+
+  // Base Colors
+  --white-h: 0;
+  --white-s: 0%;
+  --white-l: 100%;
+
+  --grey-h: 0;
+  --grey-s: 0%;
+  --grey-l: 90%;
+
+  --orange-h: 37;
+  --orange-s: 98%;
+  --orange-l: 53%;
+
+  --blue-h: 240;
+  --blue-s: 27%;
+  --blue-l: 18%;
+
+  --black-h: 0;
+  --black-s: 0%;
+  --black-l: 13%;
+
+  --red-h: 360;
+  --red-s: 85%;
+  --red-l: 59%;
+
+  --white-color: hsl(var(--white-h) var(--white-s) var(--white-l));
+  --grey-color: hsl(var(--grey-h) var(--grey-s) var(--grey-l));
+  --orange-color: hsl(var(--orange-h) var(--orange-s) var(--orange-l));
+  --blue-color: hsl(var(--blue-h) var(--blue-s) var(--blue-l));
+  --black-color: hsl(var(--black-h) var(--black-s) var(--black-l));
+  --red-color: hsl(var(--red-h) var(--red-s) var(--red-l));
+
+  // Specific Colors
+  --page-bg-color: hsl(var(--orange-h) var(--orange-s) var(--orange-l) / 0.05);
+
+  // Forms
+  --control-radius: 0.5rem; // 8px
+
+  // Z-indexes
+  --mobile-nav-z-index: 100;
+
+  // Spacing
+  --section-padding-y-sm: 2rem; // 32px
+  --section-padding-y-md: 4rem; // 64px
+
+  @include mq($from: md) {
+    --section-padding-y-sm: 2.75rem; // 44px
+    --section-padding-y-md: 5.5rem; // 88px
+  }
 }
