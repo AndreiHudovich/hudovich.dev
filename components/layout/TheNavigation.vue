@@ -17,7 +17,7 @@
         <li class="nav-meta__item">
           <a
             class="nav-meta__link"
-            :href="metadata.social.twitter"
+            :href="Metadata.TWITTER_URL"
             target="_blank"
             @click="$emit('linkClicked')"
           >
@@ -28,7 +28,7 @@
         <li class="nav-meta__item">
           <a
             class="nav-meta__link"
-            :href="metadata.social.github"
+            :href="Metadata.GITHUB_URL"
             target="_blank"
             @click="$emit('linkClicked')"
           >
@@ -42,8 +42,8 @@
 
 <script setup lang="ts">
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import Metadata from '@/enums/Metadata.enums'
 import navLinks from '@/data/navLinks'
-import metadata from '@/data/metadata'
 
 const props = defineProps<{
   isOpen: boolean
