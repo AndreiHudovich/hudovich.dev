@@ -3,6 +3,7 @@ import Metadata from './enums/Metadata.enums'
 
 export default defineNuxtConfig({
   modules: ['nuxt-simple-sitemap'],
+  ssr: true,
   typescript: {
     shim: false,
     strict: true
