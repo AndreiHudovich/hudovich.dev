@@ -49,7 +49,7 @@
 
       <p class="footer__copyright">
         &copy; {{ currentYear }} Built with
-        <FontAwesomeIcon icon="fa-solid fa-heart" />
+        <IconSolidHeart />
         by Andrei Hudovich
       </p>
     </BaseContainer>
@@ -110,12 +110,12 @@ const currentYear = computed(() => {
     white-space: nowrap;
     text-align: center;
 
-    & svg {
+    & > svg {
       margin-left: toRem(4px);
       margin-right: toRem(4px);
       width: toRem(17px);
       height: toRem(15px);
-      color: var(--red-color);
+      fill: var(--red-color);
     }
 
     &:hover {

@@ -16,10 +16,7 @@
             :href="metadata.social.twitter"
             target="_blank"
           >
-            <FontAwesomeIcon
-              class="nav-meta__icon nav-meta__icon--twitter"
-              icon="fa-brands fa-twitter"
-            />
+            <IconBrandsTwitter class="nav-meta__icon nav-meta__icon--twitter" />
           </a>
         </li>
 
@@ -29,10 +26,7 @@
             :href="metadata.social.github"
             target="_blank"
           >
-            <FontAwesomeIcon
-              class="nav-meta__icon nav-meta__icon--github"
-              icon="fa-brands fa-github"
-            />
+            <IconBrandsGithub class="nav-meta__icon nav-meta__icon--github" />
           </a>
         </li>
       </ul>
@@ -167,7 +161,7 @@ watch(
 
   &__icon {
     display: block;
-    color: var(--blue-color);
+    fill: var(--blue-color);
 
     &--twitter {
       width: toRem(33px);

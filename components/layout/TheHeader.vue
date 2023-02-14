@@ -12,7 +12,7 @@
         type="button"
         @click="toggleNavigation"
       >
-        <FontAwesomeIcon icon="fa-solid fa-bars" />
+        <IconSolidBars />
       </button>
     </BaseContainer>
   </header>
@@ -71,7 +71,7 @@ function toggleNavigation() {
       display: block;
       width: toRem(33px);
       height: toRem(29px);
-      color: var(--blue-color);
+      fill: var(--blue-color);
     }
   }
 }

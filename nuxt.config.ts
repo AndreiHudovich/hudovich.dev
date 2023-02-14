@@ -5,10 +5,7 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  css: [
-    '@/assets/styles/main.scss',
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
+  css: ['@/assets/styles/main.scss'],
   components: [
     {
       path: '@/components',
@@ -54,15 +51,6 @@ export default defineNuxtConfig({
         }
       ]
     }
-  },
-  build: {
-    transpile: [
-      '@fortawesome/vue-fontawesome',
-      '@fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-brands-svg-icons',
-      '@fortawesome/free-regular-svg-icons',
-      '@fortawesome/free-solid-svg-icons'
-    ]
   },
   vite: {
     css: {
