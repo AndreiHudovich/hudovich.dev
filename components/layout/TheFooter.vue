@@ -40,10 +40,7 @@
           <a
             class="footer-nav__link"
             :href="item.href"
-            :download="
-              item.download &&
-              'Andrei_Hudovich_-_Senior_Front-end_Engineer_-_Resume.pdf'
-            "
+            :download="item.download && FileNames.RESUME"
           >
             {{ item.label }}
           </a>
@@ -60,6 +57,7 @@
 </template>
 
 <script setup lang="ts">
+import FileNames from '@/enums/FileNames.enum'
 import navLinks from '@/data/navLinks'
 
 const currentYear = computed(() => {

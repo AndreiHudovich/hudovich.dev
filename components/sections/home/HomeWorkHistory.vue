@@ -7,7 +7,9 @@
           <p>
             Below you will find a summary of my past employment experience.
             Additionally, if you require, you can
-            <a href="/resume.pdf" :download="resumeLink">download my resume</a>.
+            <a href="/resume.pdf" :download="FileNames.RESUME"
+              >download my resume</a
+            >.
           </p>
         </template>
       </BaseSectionHeader>
@@ -159,7 +161,7 @@
 </template>
 
 <script setup lang="ts">
-const resumeLink = 'Andrei_Hudovich_-_Senior_Front-end_Engineer_-_Resume.pdf'
+import FileNames from '@/enums/FileNames.enum'
 
 const currentDate = computed(() => {
   const today = new Date()
