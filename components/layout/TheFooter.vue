@@ -136,6 +136,8 @@ const currentYear = computed(() => {
   list-style-type: none;
 
   &__link {
+    display: block;
+    padding-top: toRem(2px);
     color: var(--blue-color);
     border-bottom: toRem(2px) solid transparent;
     opacity: 0.75;

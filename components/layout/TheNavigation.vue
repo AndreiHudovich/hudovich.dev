@@ -125,6 +125,7 @@ watch(
 
   &__link {
     display: block;
+    padding-top: calc(toRem(3px) + 1px);
     padding-bottom: 1px;
     color: var(--blue-color);
     border-bottom: toRem(3px) solid transparent;
