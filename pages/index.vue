@@ -13,6 +13,7 @@ useServerSeoMeta({
   description: 'The personal website of Andrei Hudovich, front-end engineer and web enthusiast.',
   ogType: 'website',
   ogTitle: 'The personal website of Andrei Hudovich, front-end engineer and web enthusiast.',
+  ogDescription: '',
   ogUrl: Metadata.BASE_URL,
   ogImage: Metadata.SOCIAL_WEBSITE_LOGO,
   twitterCard: 'summary',
