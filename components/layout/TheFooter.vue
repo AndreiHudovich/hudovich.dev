@@ -137,18 +137,17 @@ const currentYear = computed(() => {
 
   &__link {
     color: var(--blue-color);
+    border-bottom: toRem(2px) solid transparent;
     opacity: 0.75;
     font-size: toRem(16px);
     font-weight: 500;
     line-height: 1.2;
-    text-decoration: underline transparent toRem(2px);
-    text-underline-offset: toRem(1px);
-    text-underline-position: under;
-    transition: opacity, text-decoration-color 150ms ease;
+    text-decoration: none;
+    transition: opacity, border-bottom-color 150ms ease;
 
     &:hover {
       opacity: 1;
-      text-decoration-color: var(--orange-color);
+      border-bottom-color: var(--orange-color);
     }
   }
 }

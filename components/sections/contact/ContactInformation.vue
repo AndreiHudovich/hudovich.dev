@@ -43,8 +43,7 @@
     }
 
     a {
-      color: currentColor;
-      font-weight: 500;
+      @include link;
     }
   }
 }

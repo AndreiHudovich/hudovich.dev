@@ -115,19 +115,18 @@ watch(
 
   &__link {
     display: block;
+    padding-bottom: 1px;
     color: var(--blue-color);
+    border-bottom: toRem(3px) solid transparent;
     font-size: toRem(24px);
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;
     text-transform: uppercase;
-    text-decoration: underline transparent toRem(3px);
-    text-underline-offset: toRem(2px);
-    text-underline-position: under;
-    transition: text-decoration-color 150ms ease;
+    transition: border-bottom-color 150ms ease;
 
     &:is(:hover, .router-link-active) {
-      text-decoration-color: var(--orange-color);
+      border-bottom-color: var(--orange-color);
     }
 
     @include mq($from: md) {

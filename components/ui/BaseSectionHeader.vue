@@ -30,10 +30,7 @@
     line-height: 1.7;
 
     &:deep(a) {
-      color: currentColor;
-      text-decoration: underline var(--orange-color) 2px;
-      text-underline-offset: toRem(1px);
-      text-underline-position: under;
+      @include link;
     }
 
     @include mq($from: lg) {
