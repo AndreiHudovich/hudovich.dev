@@ -21,7 +21,28 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'manifest',
+          href: '/manifest.webmanifest'
+        },
+        {
+          rel: 'icon',
+          href: '/favicon.ico',
+          sizes: 'any'
+        },
+        {
+          rel: 'icon',
+          href: '/icon.svg',
+          type: 'image/svg+xml'
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: '/apple-touch-icon.png'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com'
+        },
         {
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
