@@ -26,7 +26,6 @@
 
   &__intro {
     @include margin-trim;
-    max-width: toRem(1024px);
     font-size: toRem(19px);
     line-height: 1.7;
 

@@ -10,10 +10,10 @@
         </h1>
 
         <p class="section__intro">
-          A highly-skilled professional with more than 8&nbsp;years of
-          experience. Currently, I&nbsp;specialize in developing web
-          applications with
-          <IconLogoVue /><strong>Vue.js</strong> ecosystem.
+          A highly skilled professional with over 8&nbsp;years of experience.
+          I&nbsp;specialize in building web apps using the
+          <IconLogoVue /><strong>Vue.js</strong>
+          ecosystem.
         </p>
 
         <NuxtLink class="section__btn" to="/contact">Hire Me</NuxtLink>

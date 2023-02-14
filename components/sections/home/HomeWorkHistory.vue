@@ -1,14 +1,13 @@
 <template>
   <section class="section">
     <BaseContainer>
-      <BaseSectionHeader>
+      <BaseSectionHeader class="section__header">
         <template #heading>Work History</template>
         <template #intro>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-            quasi labore cum nesciunt mollitia exercitationem odio, modi error
-            obcaecati
-            <a href="#" download>natus repudiandae</a>.
+            Below you will find a summary of my past employment experience.
+            Additionally, if you require, you can
+            <a href="/resume.pdf" :download="resumeLink">download my resume</a>.
           </p>
         </template>
       </BaseSectionHeader>
@@ -27,17 +26,28 @@
             <div class="section-card__period">
               <time datetime="2022-06">Jun 2022</time>
               &dash;
-              <time :datetime="currentDate">Current</time>
+              <time :datetime="currentDate">Present</time>
             </div>
           </div>
 
           <ul class="section-card__description">
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li>
-              Nesciunt repellendus esse vel cupiditate tempore accusantium
-              quisquam beatae ipsam.
+              Worked to solve complex problems using the latest Web Standards.
             </li>
-            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+
+            <li>
+              Architected the product&apos;s front-end structure (Vue.js, Pinia,
+              Typescript, Vite).
+            </li>
+
+            <li>
+              Accomplished the development of the sophisticated Vue.js UI
+              components.
+            </li>
+
+            <li>Developed the open-source component library.</li>
+
+            <li>Crafted responsive marketing landing pages.</li>
           </ul>
         </article>
 
@@ -48,24 +58,31 @@
             <ul class="section-card__meta">
               <li>Casago</li>
               <li>United States</li>
-              <li>Contract</li>
+              <li>Full-time</li>
             </ul>
 
             <div class="section-card__period">
               <time datetime="2021-10">Oct 2021</time>
               &dash;
               <time datetime="2022-04">Apr 2022</time>
-              (7 mos)
             </div>
           </div>
 
           <ul class="section-card__description">
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li>
-              Nesciunt repellendus esse vel cupiditate tempore accusantium
-              quisquam beatae ipsam.
+              Was one of the team members who joined the new company after
+              Nokori's acquisition.
             </li>
-            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+
+            <li>
+              Helped to adapt and embed the new assets into the franchise
+              ecosystem.
+            </li>
+
+            <li>
+              Developed the ground for the new project based on Vue.js
+              framework.
+            </li>
           </ul>
         </article>
 
@@ -76,24 +93,32 @@
             <ul class="section-card__meta">
               <li>Nokori</li>
               <li>United States</li>
-              <li>Contract</li>
+              <li>Full-time</li>
             </ul>
 
             <div class="section-card__period">
               <time datetime="2020-07">Jul 2020</time>
               &dash;
               <time datetime="2021-10">Oct 2021</time>
-              (1 yr 4 mos)
             </div>
           </div>
 
           <ul class="section-card__description">
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li>
-              Nesciunt repellendus esse vel cupiditate tempore accusantium
-              quisquam beatae ipsam.
+              Acted as a primary and sole front-end developer of the team.
             </li>
-            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+
+            <li>
+              Was responsible for development of the Vue.js single-page
+              application.
+            </li>
+
+            <li>Worked on responsive static marketing pages.</li>
+
+            <li>
+              Managed the migration from Vue 2 codebase to Vue 3 and Composition
+              API.
+            </li>
           </ul>
         </article>
 
@@ -102,26 +127,30 @@
             <h3 class="section-card__heading">Front-end Developer</h3>
 
             <ul class="section-card__meta">
-              <li>Upwork</li>
+              <li>Freelance platforms</li>
               <li>Worldwide</li>
-              <li>Freelance</li>
             </ul>
 
             <div class="section-card__period">
-              <time datetime="2016-01">Jan 2016</time>
+              <time datetime="2015-01">Jan 2015</time>
               &dash;
               <time datetime="2020-07">Jul 2020</time>
-              (4 yrs 7 mos)
             </div>
           </div>
 
           <ul class="section-card__description">
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li>
-              Nesciunt repellendus esse vel cupiditate tempore accusantium
-              quisquam beatae ipsam.
+              Kick-started my developing career as a PSD-to-HTML developer.
             </li>
-            <li>Praesentium ea fuga excepturi, nisi mollitia minus quasi.</li>
+
+            <li>
+              Helped dozens of clients around the world to build and deploy
+              their websites.
+            </li>
+
+            <li>Worked hard to meet client deadlines.</li>
+
+            <li>Matured as a self-taught senior front-end engineer.</li>
           </ul>
         </article>
       </div>
@@ -130,6 +159,8 @@
 </template>
 
 <script setup lang="ts">
+const resumeLink = 'Andrei_Hudovich_-_Senior_Front-end_Engineer_-_Resume.pdf'
+
 const currentDate = computed(() => {
   const today = new Date()
   const year = today.getFullYear()
@@ -141,6 +172,10 @@ const currentDate = computed(() => {
 <style scoped lang="scss">
 .section {
   margin-bottom: var(--section-padding-y-sm);
+
+  &__header {
+    max-width: toRem(800px);
+  }
 
   &__body {
     position: relative;
@@ -229,8 +264,14 @@ const currentDate = computed(() => {
     padding-left: 0;
     list-style-type: none;
 
-    & > li:nth-child(-n + 2) {
+    & > li {
       position: relative;
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
 
       &::after {
         content: '';

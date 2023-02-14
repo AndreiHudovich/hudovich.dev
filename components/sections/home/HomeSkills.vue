@@ -1,15 +1,14 @@
 <template>
   <section class="section">
     <BaseContainer>
-      <BaseSectionHeader>
+      <BaseSectionHeader class="section__header">
         <template #heading>Skills</template>
         <template #intro>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-            quasi labore cum nesciunt mollitia exercitationem odio, fuga
-            explicabo totam id corrupti ducimus magnam minima rerum eum alias
-            modi error obcaecati natus, <a href="#">repudiandae</a> unde ad vel
-            <a href="#">cupiditate</a> soluta.
+            I'm a great enthusiast of latest technologies and tools. Being on
+            the cutting edge of modern development trends is extremely important
+            to me. I&nbsp;constantly gain new skills by reading books, watching
+            courses, attending conferences and following top developers.
           </p>
         </template>
       </BaseSectionHeader>
@@ -25,8 +24,8 @@
           <h3 class="section-card__heading">Javascript / Typescript</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            By default, I start all new projects with TS. Having a fully typed
+            app helps keep it less error-prone.
           </p>
         </article>
 
@@ -34,13 +33,16 @@
           <div class="section-card__logos">
             <IconLogoVue class="section-card__icon section-card__icon--vue" />
             <IconLogoNuxt class="section-card__icon section-card__icon--nuxt" />
+            <IconLogoAstro
+              class="section-card__icon section-card__icon--astro"
+            />
           </div>
 
-          <h3 class="section-card__heading">Vue / Nuxt</h3>
+          <h3 class="section-card__heading">Vue + Nuxt / Astro</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            SPA, SSR, SSG or Universal Rendering? I'll get you covered with the
+            best option available.
           </p>
         </article>
 
@@ -53,8 +55,8 @@
           <h3 class="section-card__heading">HTML & CSS</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            Those two are my old friends, I started my career by converting
+            designs to HTML & CSS.
           </p>
         </article>
 
@@ -63,11 +65,11 @@
             <IconLogoSass class="section-card__icon section-card__icon--sass" />
           </div>
 
-          <h3 class="section-card__heading">Sass</h3>
+          <h3 class="section-card__heading">Sass & PostCSS</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            When working on stylesheets, using pre- and post-processor allows me
+            to be as productive as possible.
           </p>
         </article>
 
@@ -81,8 +83,8 @@
           <h3 class="section-card__heading">Tailwind</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            The rise of utility frameworks has made me stick to the trends, but
+            I'm not a big fan of them in general.
           </p>
         </article>
 
@@ -95,8 +97,8 @@
           <h3 class="section-card__heading">Vite / npm</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            Since the early days when Vite was released, it has been my go-to
+            tool for every project.
           </p>
         </article>
 
@@ -113,8 +115,8 @@
           <h3 class="section-card__heading">Vitest & Playwright</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            Testing is the most crucial part of any development process. I
+            prefer to use the best-in-class tools.
           </p>
         </article>
 
@@ -129,8 +131,8 @@
           <h3 class="section-card__heading">Git & GitHub</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            Git workflows and tools like husky, lint-staged, and conventional
+            commits are what I have mastered.
           </p>
         </article>
 
@@ -147,8 +149,8 @@
           <h3 class="section-card__heading">Figma / Sketch</h3>
 
           <p class="section-card__description">
-            Lorem ipsum dolor sit amet coecte adiing elit. Quia asenda posmus
-            pariur voltem.
+            During my career path, I worked with numerous design files, so I am
+            comfortable with any environment.
           </p>
         </article>
       </div>
@@ -159,6 +161,10 @@
 <style scoped lang="scss">
 .section {
   margin-bottom: var(--section-padding-y-md);
+
+  &__header {
+    max-width: toRem(850px);
+  }
 
   &__body {
     display: grid;
@@ -184,8 +190,8 @@
     display: flex;
     align-items: center;
     gap: toRem(12px);
-    margin-bottom: toRem(8px);
-    height: toRem(34px);
+    margin-bottom: toRem(4px);
+    height: toRem(48px);
   }
 
   &__icon {
@@ -200,8 +206,16 @@
     }
 
     &--nuxt {
+      margin-left: toRem(-4px);
       width: toRem(34px);
       height: toRem(28px);
+    }
+
+    &--astro {
+      transform: translateY(toRem(3px));
+      margin-left: toRem(-4px);
+      width: toRem(34px);
+      height: toRem(48px);
     }
 
     &--html {
