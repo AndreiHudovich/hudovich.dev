@@ -3,7 +3,11 @@
     <div class="nav__container">
       <ul class="nav__list">
         <li v-for="item in navLinks.header" :key="item.label" class="nav__item">
-          <NuxtLink class="nav__link" :to="item.href">
+          <NuxtLink
+            class="nav__link"
+            :to="item.href"
+            @click="$emit('linkClicked')"
+          >
             {{ item.label }}
           </NuxtLink>
         </li>
@@ -15,6 +19,7 @@
             class="nav-meta__link"
             :href="metadata.social.twitter"
             target="_blank"
+            @click="$emit('linkClicked')"
           >
             <IconBrandsTwitter class="nav-meta__icon nav-meta__icon--twitter" />
           </a>
@@ -25,6 +30,7 @@
             class="nav-meta__link"
             :href="metadata.social.github"
             target="_blank"
+            @click="$emit('linkClicked')"
           >
             <IconBrandsGithub class="nav-meta__icon nav-meta__icon--github" />
           </a>
@@ -41,6 +47,10 @@ import metadata from '@/data/metadata'
 
 const props = defineProps<{
   isOpen: boolean
+}>()
+
+defineEmits<{
+  (e: 'linkClicked'): void
 }>()
 
 const navRef = ref<HTMLElement | null>(null)
