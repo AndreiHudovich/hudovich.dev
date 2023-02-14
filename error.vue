@@ -21,9 +21,9 @@
           </template>
         </p>
 
-        <button class="not-found__btn" @click="handleError">
+        <BaseButton class="not-found__btn" @click="handleError">
           Back to Home
-        </button>
+        </BaseButton>
       </BaseContainer>
     </section>
   </NuxtLayout>
@@ -84,7 +84,6 @@ const handleError = () => clearError({ redirect: '/' })
   }
 
   &__btn {
-    @include btn;
     width: toRem(220px);
     height: toRem(64px);
   }

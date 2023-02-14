@@ -16,7 +16,11 @@
           ecosystem.
         </p>
 
-        <NuxtLink class="section__btn" to="/contact">Hire Me</NuxtLink>
+        <NuxtLink v-slot="{ href, navigate }" to="/contact" custom>
+          <BaseButton class="section__btn" :href="href" @click="navigate">
+            Hire Me
+          </BaseButton>
+        </NuxtLink>
 
         <figure v-if="isMediaQueryMd" class="section__illustration">
           <img src="/images/home-hero.svg" alt="" />
@@ -120,7 +124,6 @@ const isMediaQueryMd = useMediaQuery('(min-width: 64em)')
   }
 
   &__btn {
-    @include btn;
     width: toRem(220px);
     height: toRem(64px);
   }
