@@ -23,6 +23,22 @@
   }
 }
 
+// TODO: Move to BaseButton component
+@mixin btn {
+  display: block;
+  padding: 0;
+  color: var(--white-color);
+  background-color: var(--orange-color);
+  border: 0;
+  border-radius: var(--control-radius);
+  font-size: toRem(24px);
+  font-weight: 700;
+  line-height: toRem(64px);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @mixin dark-theme {
   html.dark & {
     @content;
