@@ -121,6 +121,14 @@ watch(
     line-height: 1.2;
     text-decoration: none;
     text-transform: uppercase;
+    text-decoration: underline transparent toRem(3px);
+    text-underline-offset: toRem(2px);
+    text-underline-position: under;
+    transition: text-decoration-color 150ms ease;
+
+    &:is(:hover, .router-link-active) {
+      text-decoration-color: var(--orange-color);
+    }
 
     @include mq($from: md) {
       font-size: toRem(16px);
@@ -146,12 +154,8 @@ watch(
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     width: toRem(36px);
     height: toRem(36px);
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
 
     @include mq($from: md) {
       width: auto;
@@ -178,13 +182,7 @@ watch(
       height: toRem(27px);
     }
 
-    &--mode {
-      width: toRem(26px);
-      height: toRem(26px);
-    }
-
-    &--github,
-    &--mode {
+    &--github {
       @include mq($from: md) {
         width: toRem(22px);
         height: toRem(22px);

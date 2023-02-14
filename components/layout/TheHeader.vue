@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <BaseContainer class="header__container" fluid>
-      <a class="header__logo" href="/">
+      <NuxtLink class="header__logo" to="/">
         <BaseLogo />
-      </a>
+      </NuxtLink>
 
       <TheNavigation :is-open="state.isOpen" />
 
