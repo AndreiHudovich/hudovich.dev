@@ -141,7 +141,15 @@ const currentYear = computed(() => {
     font-size: toRem(16px);
     font-weight: 500;
     line-height: 1.2;
-    text-decoration: none;
+    text-decoration: underline transparent toRem(2px);
+    text-underline-offset: toRem(1px);
+    text-underline-position: under;
+    transition: opacity, text-decoration-color 150ms ease;
+
+    &:hover {
+      opacity: 1;
+      text-decoration-color: var(--orange-color);
+    }
   }
 }
 </style>
