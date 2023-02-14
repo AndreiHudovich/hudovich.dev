@@ -1,19 +1,17 @@
 <template>
   <section class="contact">
     <BaseContainer>
-      <BaseSectionHeader>
-        <template #heading>Get in touch</template>
-        <template #intro>
-          <p class="intro">Do you have an exciting project?</p>
-          <p>
-            You can reach me anytime at
-            <a href="mailto:andrei.hudovich@gmail.com">
-              andrei.hudovich@gmail.com
-            </a>
-          </p>
-          <p>I usually respond in 1-2 business days.</p>
-        </template>
-      </BaseSectionHeader>
+      <h1 class="contact__heading">Get in touch</h1>
+      <div class="contact__text">
+        <p class="intro">Do you have an exciting project?</p>
+        <p>
+          You can reach me anytime at
+          <a href="mailto:andrei.hudovich@gmail.com">
+            andrei.hudovich@gmail.com
+          </a>
+        </p>
+        <p>I usually respond in 1-2 business days.</p>
+      </div>
     </BaseContainer>
   </section>
 </template>
