@@ -18,9 +18,9 @@
 
         <NuxtLink class="section__btn" to="/contact">Hire Me</NuxtLink>
 
-        <div v-if="isMediaQueryMd" class="section__illustration">
+        <figure v-if="isMediaQueryMd" class="section__illustration">
           <img src="/images/home-hero.svg" alt="" />
-        </div>
+        </figure>
       </div>
     </BaseContainer>
   </section>
@@ -120,17 +120,9 @@ const isMediaQueryMd = useMediaQuery('(min-width: 64em)')
   }
 
   &__btn {
-    display: block;
+    @include btn;
     width: toRem(220px);
     height: toRem(64px);
-    color: var(--white-color);
-    background-color: var(--orange-color);
-    border-radius: var(--control-radius);
-    font-size: toRem(24px);
-    font-weight: 700;
-    line-height: toRem(64px);
-    text-align: center;
-    text-decoration: none;
   }
 
   &__illustration {
@@ -139,6 +131,7 @@ const isMediaQueryMd = useMediaQuery('(min-width: 64em)')
       right: 0;
       bottom: 0;
       display: block;
+      margin: 0;
       width: 100%;
       max-width: clamp(toRem(380px), 37.11vw, toRem(460px));
 
