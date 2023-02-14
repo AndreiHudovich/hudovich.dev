@@ -35,15 +35,6 @@
             />
           </a>
         </li>
-
-        <li class="nav-meta__item">
-          <button class="nav-meta__link" type="button">
-            <FontAwesomeIcon
-              class="nav-meta__icon nav-meta__icon--mode"
-              icon="fa-solid fa-circle-half-stroke"
-            />
-          </button>
-        </li>
       </ul>
     </div>
   </nav>

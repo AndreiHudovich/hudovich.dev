@@ -38,9 +38,3 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-@mixin dark-theme {
-  html.dark & {
-    @content;
-  }
-}
