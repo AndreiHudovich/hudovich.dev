@@ -40,7 +40,10 @@
           <a
             class="footer-nav__link"
             :href="item.href"
-            :download="item.download"
+            :download="
+              item.download &&
+              'Andrei_Hudovich_-_Senior_Front-end_Engineer_-_Resume.pdf'
+            "
           >
             {{ item.label }}
           </a>

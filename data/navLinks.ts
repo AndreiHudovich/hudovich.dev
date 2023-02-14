@@ -23,7 +23,7 @@ const navLinks = {
       label: 'Toolbox'
     },
     {
-      href: '/cv-andrei-hudovich.pdf',
+      href: '/resume.pdf',
       label: 'Resume',
       download: true
     }
