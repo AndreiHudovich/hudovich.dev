@@ -1,6 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import Metadata from './enums/Metadata.enums'
 
 export default defineNuxtConfig({
+  modules: ['nuxt-simple-sitemap'],
   typescript: {
     shim: false,
     strict: true
@@ -71,6 +73,11 @@ export default defineNuxtConfig({
           `
         }
       }
+    }
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: Metadata.BASE_URL
     }
   }
 })
