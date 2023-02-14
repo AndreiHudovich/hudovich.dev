@@ -23,6 +23,11 @@ defineProps<{
   line-height: toRem(64px);
   text-align: center;
   text-decoration: none;
+  transition: background-color 200ms ease;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--blue-color);
+  }
 }
 </style>
