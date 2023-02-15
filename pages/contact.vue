@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-useServerSeoMeta({
+useSeoMeta({
   title: 'Contact - Andrei Hudovich',
   description: ''
 })
