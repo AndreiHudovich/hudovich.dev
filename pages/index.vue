@@ -8,7 +8,7 @@
 import Metadata from '@/enums/Metadata.enums'
 
 // prettier-ignore
-useServerSeoMeta({
+useSeoMeta({
   title: 'Andrei Hudovich - Senior Front-end Engineer',
   description: 'The personal website of Andrei Hudovich, front-end engineer and web enthusiast.',
   ogType: 'website',
