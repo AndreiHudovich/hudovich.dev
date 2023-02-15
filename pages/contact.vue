@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-useHead({
+useServerSeoMeta({
   title: 'Contact - Andrei Hudovich',
-  meta: [{ name: 'description', content: '' }]
+  description: ''
 })
 </script>
