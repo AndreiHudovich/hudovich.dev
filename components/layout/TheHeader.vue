@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <BaseContainer class="header__container" fluid>
-      <NuxtLink class="header__logo" to="/">
+      <NuxtLink class="header__logo" to="/" aria-label="Home page">
         <BaseLogo />
       </NuxtLink>
 
@@ -13,6 +13,7 @@
       <button
         class="header__hamburger-btn"
         type="button"
+        aria-label="Navigation"
         @click="toggleNavigation"
       >
         <IconSolidBars />
