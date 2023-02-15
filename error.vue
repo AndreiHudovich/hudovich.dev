@@ -38,6 +38,9 @@ const is404Error = computed(() => {
   }
 })
 
+console.log(error.value)
+console.log(`is404Error: ${is404Error.value}`)
+
 const handleError = () => clearError({ redirect: '/' })
 </script>
 
