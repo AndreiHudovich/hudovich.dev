@@ -33,10 +33,12 @@
 const error = useError()
 
 const is404Error = computed(() => {
-  if (error?.value && !(error.value instanceof Error)) {
-    return error.value.statusCode === '404'
+  if (error.value && !(error.value instanceof Error)) {
+    return String(error.value.statusCode) === '404'
   }
 })
+
+console.log(`is 404: ${is404Error.value}`)
 
 const handleError = () => clearError({ redirect: '/' })
 </script>
