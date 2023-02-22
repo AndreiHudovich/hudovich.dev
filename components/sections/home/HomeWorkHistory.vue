@@ -28,7 +28,7 @@
             <div class="section-card__period">
               <time datetime="2022-06">Jun 2022</time>
               &dash;
-              <time :datetime="currentDate">Present</time>
+              <time datetime="2023-02">Feb 2023</time>
             </div>
           </div>
 
@@ -162,13 +162,6 @@
 
 <script setup lang="ts">
 import FileNames from '@/enums/FileNames.enum'
-
-const currentDate = computed(() => {
-  const today = new Date()
-  const year = today.getFullYear()
-  const month = String(today.getMonth() + 1).padStart(2, '0')
-  return `${year}-${month}`
-})
 </script>
 
 <style scoped lang="scss">
