@@ -237,6 +237,10 @@ import IconLogoSketch from '@/components/icons/IconLogoSketch.astro'
     }
 
     &__icon {
+      :global(svg) {
+        display: block;
+      }
+
       &--js {
         :global(svg) {
           width: toRem(34px);
