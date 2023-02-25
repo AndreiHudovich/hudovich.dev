@@ -14,11 +14,13 @@
 // TODO: Replace with `margin-trim` when it will be implemented by browsers
 // https://developer.mozilla.org/en-US/docs/Web/CSS/margin-trim
 @mixin margin-trim {
-  & > :first-child {
+  & > :first-child,
+  :global(> :first-child) {
     margin-top: 0;
   }
 
-  & > :last-child {
+  & > :last-child,
+  :global(> :last-child) {
     margin-bottom: 0;
   }
 }
