@@ -1,38 +1,43 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "check-types": "vue-tsc --noEmit --skipLibCheck",
-    "check-format": "prettier --check .",
-    "check-lint": "eslint --max-warnings 0 .",
-    "format": "prettier --write ."
+    "astro": "astro",
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint:typecheck": "astro check && tsc --noEmit --skipLibCheck",
+    "lint:eslint": "eslint --ext .astro,.ts,.js,.cjs,.mjs --max-warnings 0 --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "format:prettier": "prettier --write ."
   },
   "dependencies": {
-    "@vueuse/core": "^9.12.0",
     "body-scroll-lock": "^4.0.0-beta.0",
-    "normalize.css": "^8.0.1"
+    "jump.js": "^1.0.2",
+    "normalize.css": "^8.0.1",
+    "sass-mq": "^6.0.0"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.0.3",
+    "@astrojs/sitemap": "^1.1.0",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@frontendista/astro-html-minify": "^1.0.7",
     "@types/body-scroll-lock": "^3.1.0",
-    "eslint": "^8.33.0",
+    "@types/gtag.js": "^0.0.12",
+    "@typescript-eslint/parser": "^5.53.0",
+    "astro": "^2.0.14",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.23.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
-    "nuxt": "^3.1.2",
-    "nuxt-simple-sitemap": "^1.0.7",
     "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
     "sass": "^1.58.0",
-    "sass-mq": "^6.0.0",
-    "typescript": "^4.9.5",
-    "vue-gtag-next": "^1.14.0",
-    "vue-tsc": "^1.0.24"
+    "typescript": "^4.9.5"
   }
 }

@@ -1,7 +1,4 @@
 .husky
-.nuxt
-.nitro
-.cache
-.output
 dist
 *.json
+src/components/head/Gtag.astro

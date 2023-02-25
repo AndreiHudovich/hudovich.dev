@@ -1,8 +1,27 @@
 {
   "root": true,
-  "extends": ["@nuxtjs/eslint-config-typescript", "prettier"],
-  "rules": {
-    "no-console": "off",
-    "vue/no-multiple-template-root": "off"
-  }
+  "extends": ["plugin:astro/recommended", "prettier"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    },
+    {
+      // Parse <script> inside *.astro components as Typescript
+      "files": ["**/*.astro/*.js"],
+      "parser": "@typescript-eslint/parser"
+    },
+    {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
 }
