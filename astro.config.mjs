@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
-import frontendistahtmlMinify from '@frontendista/astro-html-minify'
+import htmlMinify from '@frontendista/astro-html-minify'
 import Metadata from './src/enums/Metadata.enums'
 
 // https://astro.build/config
@@ -15,7 +15,21 @@ export default defineConfig({
         forward: ['dataLayer.push']
       }
     }),
-    frontendistahtmlMinify()
+    htmlMinify({
+      htmlTerserMinifierOptions: {
+        collapseInlineTagWhitespace: false,
+        keepClosingSlash: true,
+        minifyCSS: false,
+        minifyJS: false,
+        noNewlinesBeforeTagClose: true,
+        processConditionalComments: false,
+        quoteCharacter: '"',
+        removeAttributeQuotes: true,
+        removeTagWhitespace: false,
+        sortAttributes: true,
+        trimCustomFragments: true
+      }
+    })
   ],
   vite: {
     resolve: {
