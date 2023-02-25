@@ -1,4 +1,12 @@
-<header class="section-header">
+---
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<header class:list={['section-header', className]}>
   <h2 class="section-header__heading">
     <slot name="heading" />
   </h2>
