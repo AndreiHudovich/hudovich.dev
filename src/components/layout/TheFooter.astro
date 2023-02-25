@@ -1,0 +1,158 @@
+---
+import BaseContainer from '@/components/layout/BaseContainer.astro'
+import IconSolidHeart from '@/components/icons/IconSolidHeart.astro'
+import FileNames from '@/enums/FileNames.enum'
+import navLinks from '@/data/navLinks'
+---
+
+<footer class="footer">
+  <BaseContainer class="footer__illustration" fluid={true}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 71">
+      <path
+        fill="#44425C"
+        fill-rule="evenodd"
+        d="m31.858 13.369 4.237 10.256c7.956 1.81 20.748 7.433 21.334 24.886.124 3.679.011 6.74-.272 9.286a2.979 2.979 0 0 1 2.2-.169c1.177.38 2.04 1.356 2.66 2.39 1.16 1.937 1.624 4.478.381 6.365-1.077 1.636-3.12 2.375-5.022 3.01-2.466.822-5.211 1.638-7.619.722-1.115.082-1.894-.22-1.894-.22l-15.646-.427c-1.189.622-3.093 1.07-6.092 1.11-2.923.04-4.415-.546-5.043-1.415l-2.133-.058c-1.11.805-3.128 1.426-6.683 1.473-10.614.142-2.358-7.95-2.358-7.95L5.85 41.83c-.673-2.162-1.13-4.439-1.293-6.631l-.105-.537.072.038c-.077-1.434-.024-2.826.182-4.118a14.097 14.097 0 0 1 .174-.907c-.82-.533-1.514-1.095-2.053-1.669-5.203-5.538 1.579-15.126 1.579-15.126S-.047 2.424 3.239.974c3.287-1.45 8.764 5.933 8.764 5.933 3.286-2.373 11.913.528 11.913.528s4.656-5.67 9.175-4.615c4.519 1.055-1.233 10.549-1.233 10.549Z"
+        clip-rule="evenodd"></path>
+      <path
+        fill="#343348"
+        fill-rule="evenodd"
+        d="M20.687 68.897c.556 1.253 2.295 1.888 5.17 1.888.089 0 .18 0 .27-.002 4.184-.056 6.793-.904 7.755-2.521.84-1.412.106-2.887-.033-3.143l-3.386-24.238-.421.054 3.396 24.315.02.035c.01.014.84 1.455.055 2.773-.87 1.462-3.426 2.263-7.391 2.316-2.85.041-4.544-.513-5.044-1.637-.973-2.19 2.801-5.928 2.84-5.965l.077-.076-2.232-11.462-.418.075 2.192 11.253c-.57.578-3.863 4.055-2.85 6.335Zm-13.858 0c.557 1.253 2.296 1.888 5.17 1.888l.27-.002c4.184-.056 6.793-.904 7.755-2.522.84-1.411.107-2.887-.033-3.142l-2.354-16.856-.42.054 2.358 16.894.006.039.02.034c.008.015.838 1.463.052 2.777-.871 1.46-3.427 2.26-7.389 2.313-2.85.039-4.544-.513-5.044-1.638-.972-2.19 2.801-5.927 2.84-5.965l.076-.074-3.704-21.114-.42.069L9.682 62.56c-.566.573-3.865 4.054-2.852 6.337Z"
+        clip-rule="evenodd"></path>
+      <path
+        fill="#FCA311"
+        fill-rule="evenodd"
+        d="M15.068 20.039c1.916-1.42 4.865-.284 4.865-.284l-2.654 3.549-2.211-3.265Zm18.426 7.142c.57-1.253.883-2.57.934-3.897.097.017.194.036.293.056a10.62 10.62 0 0 1-.957 3.955c-1.215 2.666-3.426 4.703-6.229 5.736-2.578.952-5.477 1.433-8.487 1.433-1.983 0-12.435-1.358-14.571-2.765.01-.073.196-1.017.317-1.631l.101-.518c4.824 3.24 14.363 6.229 22.534 3.216 2.73-1.005 4.883-2.988 6.065-5.585Z"
+        clip-rule="evenodd"></path>
+      <path
+        fill="#E5E5E5"
+        fill-opacity=".5"
+        fill-rule="evenodd"
+        d="M11.645 14.918c.579 0 1.048-.452 1.048-1.01 0-.557-.47-1.01-1.048-1.01-.58 0-1.049.453-1.049 1.01 0 .558.47 1.01 1.049 1.01Zm10.483 0c.579 0 1.048-.452 1.048-1.01 0-.557-.47-1.01-1.048-1.01-.579 0-1.048.453-1.048 1.01 0 .558.469 1.01 1.048 1.01Z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </BaseContainer>
+
+  <BaseContainer class="footer__container" fluid={true}>
+    <ul class="footer-nav">
+      {
+        navLinks.footer.map((item) => (
+          <li class="footer-nav__item">
+            <a
+              class="footer-nav__link"
+              href={item.href}
+              download={item.download && FileNames.RESUME}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="footer__copyright">
+      <span>&copy;&nbsp;<time id="year"></time> Built with</span>
+      <IconSolidHeart />
+      <span>by Andrei Hudovich</span>
+    </p>
+  </BaseContainer>
+</footer>
+
+<style lang="scss">
+  .footer {
+    position: sticky;
+    top: 100vh;
+
+    &__illustration {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid var(--grey-color);
+
+      & > svg {
+        margin-bottom: toRem(-2px);
+        width: toRem(64px);
+        height: toRem(71px);
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(20px);
+      height: toRem(112px);
+
+      @include mq($from: md) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: toRem(80px);
+      }
+    }
+
+    &__copyright {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: hsl(var(--blue-h) var(--blue-s) var(--blue-l) / 0.5);
+      font-size: toRem(16px);
+      font-weight: 500;
+      line-height: 1.2;
+      white-space: nowrap;
+      text-align: center;
+
+      :global(svg) {
+        margin-left: toRem(4px);
+        margin-right: toRem(4px);
+        width: toRem(17px);
+        height: toRem(15px);
+        fill: var(--red-color);
+      }
+
+      &:hover {
+        :global(svg) {
+          animation: heartBeat 1s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: toRem(24px);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+
+    &__link {
+      display: block;
+      padding-top: toRem(2px);
+      color: var(--blue-color);
+      border-bottom: toRem(2px) solid transparent;
+      opacity: 0.75;
+      font-size: toRem(16px);
+      font-weight: 500;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: opacity, border-bottom-color 150ms ease;
+
+      &:hover {
+        opacity: 1;
+        border-bottom-color: var(--orange-color);
+      }
+    }
+  }
+</style>
+
+<script>
+  if (document.querySelector('.footer')) {
+    const yearEl = document.querySelector('#year') as HTMLTimeElement
+    const today = new Date()
+    const currentYear = String(today.getFullYear())
+
+    yearEl.setAttribute('datetime', currentYear)
+    yearEl.textContent = currentYear
+  }
+</script>

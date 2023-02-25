@@ -1,0 +1,32 @@
+---
+interface Props {
+  class?: string
+  fluid?: boolean
+}
+
+const { class: className, fluid = false } = Astro.props
+---
+
+<div class:list={['container', { 'container--fluid': fluid }, className]}>
+  <slot />
+</div>
+
+<style lang="scss">
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: toRem(24px);
+    padding-right: toRem(24px);
+    width: 100%;
+    max-width: toRem(1120px);
+
+    @include mq($from: md) {
+      padding-left: toRem(48px);
+      padding-right: toRem(48px);
+    }
+
+    &--fluid {
+      max-width: none;
+    }
+  }
+</style>
