@@ -182,6 +182,10 @@ import BaseLogo from '@/components/ui/BaseLogo.astro'
         border-bottom-color: var(--orange-color);
       }
 
+      &.js-active {
+        border-bottom-color: var(--orange-color);
+      }
+
       @include mq($from: md) {
         font-size: toRem(16px);
       }
@@ -253,6 +257,7 @@ import BaseLogo from '@/components/ui/BaseLogo.astro'
 <script>
   import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
+  // Mobile navigation
   if (document.querySelector('.header')) {
     const hamburgerBtnEl = document.querySelector(
       '.header__hamburger-btn'
@@ -268,6 +273,25 @@ import BaseLogo from '@/components/ui/BaseLogo.astro'
       } else {
         enableBodyScroll(navEl)
         navEl.classList.remove('js-open')
+      }
+    }
+  }
+
+  // Active link highlighting
+  if (document.querySelector('.header')) {
+    const pagename = window.location.pathname.split('/')[1]
+
+    if (pagename) {
+      const navLinksList = document.querySelectorAll(
+        '.nav__link'
+      ) as NodeListOf<HTMLAnchorElement>
+
+      const activeLinkEl = Array.from(navLinksList).find((linkEl) =>
+        linkEl.href.includes(pagename)
+      )
+
+      if (activeLinkEl) {
+        activeLinkEl.classList.add('js-active')
       }
     }
   }
