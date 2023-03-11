@@ -1,6 +1,10 @@
 const navLinks = {
   header: [
     {
+      href: '/uses',
+      label: 'Uses'
+    },
+    {
       href: '/contact',
       label: 'Contact'
     }

@@ -37,3 +37,14 @@
     border-bottom-color: transparent;
   }
 }
+
+@mixin small-link {
+  color: currentColor;
+  border-bottom: 1px solid var(--orange-color);
+  text-decoration: none;
+  transition: border-bottom-width 50ms ease;
+
+  &:hover {
+    border-bottom-width: toRem(3px);
+  }
+}
