@@ -25,7 +25,9 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           <h3 class="section-card__heading">Senior Front-end Engineer</h3>
 
           <ul class="section-card__meta">
-            <li>Pivro</li>
+            <li>
+              <a href="https://www.pivro.com/" target="_blank">Pivro</a>
+            </li>
             <li>United Kingdom</li>
             <li>Full-Time</li>
           </ul>
@@ -49,7 +51,9 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           <h3 class="section-card__heading">Senior Front-end Engineer</h3>
 
           <ul class="section-card__meta">
-            <li>LolaDB</li>
+            <li>
+              <a href="https://loladb.com/" target="_blank">LolaDB</a>
+            </li>
             <li>United States</li>
             <li>Contract</li>
           </ul>
@@ -87,7 +91,9 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           <h3 class="section-card__heading">Senior Front-end Engineer</h3>
 
           <ul class="section-card__meta">
-            <li>Casago</li>
+            <li>
+              <a href="https://casago.com/" target="_blank">Casago</a>
+            </li>
             <li>United States</li>
             <li>Full-time</li>
           </ul>
@@ -298,6 +304,17 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           background-color: var(--blue-color);
           border-radius: 50%;
           opacity: 0.25;
+        }
+
+        a {
+          color: currentColor;
+          border-bottom: 1px solid var(--orange-color);
+          text-decoration: none;
+          transition: border-bottom-width 50ms ease;
+
+          &:hover {
+            border-bottom-width: toRem(3px);
+          }
         }
       }
     }
