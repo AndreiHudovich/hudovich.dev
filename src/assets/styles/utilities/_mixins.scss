@@ -26,19 +26,6 @@
 }
 
 @mixin link {
-  padding-bottom: 1px;
-  color: var(--blue-color);
-  border-bottom: toRem(3px) solid var(--orange-color);
-  font-weight: 500;
-  text-decoration: none;
-  transition: border-bottom-color 150ms ease;
-
-  &:hover {
-    border-bottom-color: transparent;
-  }
-}
-
-@mixin small-link {
   color: currentColor;
   border-bottom: 1px solid var(--orange-color);
   text-decoration: none;
