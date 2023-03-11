@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint:typecheck": "astro check && tsc --noEmit --skipLibCheck",
+    "lint:tsc": "astro check && tsc --noEmit --skipLibCheck",
     "lint:eslint": "eslint --ext .astro,.ts,.js,.cjs,.mjs --max-warnings 0 --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "format:prettier": "prettier --write ."
