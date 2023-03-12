@@ -126,6 +126,10 @@ import navLinks from '@/data/navLinks'
     padding-left: 0;
     list-style-type: none;
 
+    @include mq($from: lg) {
+      gap: toRem(32px);
+    }
+
     &__link {
       display: block;
       padding-top: toRem(2px);
