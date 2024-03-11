@@ -25,7 +25,35 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           <h3 class="section-card__heading">Senior Front-end Engineer</h3>
 
           <ul class="section-card__meta">
-            <li>LolaDB</li>
+            <li>
+              <a href="https://www.pivro.com/" target="_blank">Pivro</a>
+            </li>
+            <li>United Kingdom</li>
+            <li>Full-Time</li>
+          </ul>
+
+          <div class="section-card__period">
+            <time datetime="2022-03">Mar 2023</time>
+            &dash; Present
+          </div>
+        </div>
+
+        <ul class="section-card__description">
+          <li>
+            Joined the team to improve the functionality of the top-notch
+            marketing tool in UK's real-estate sector.
+          </li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <div class="section-card__info">
+          <h3 class="section-card__heading">Senior Front-end Engineer</h3>
+
+          <ul class="section-card__meta">
+            <li>
+              <a href="https://loladb.com/" target="_blank">LolaDB</a>
+            </li>
             <li>United States</li>
             <li>Contract</li>
           </ul>
@@ -63,7 +91,9 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           <h3 class="section-card__heading">Senior Front-end Engineer</h3>
 
           <ul class="section-card__meta">
-            <li>Casago</li>
+            <li>
+              <a href="https://casago.com/" target="_blank">Casago</a>
+            </li>
             <li>United States</li>
             <li>Full-time</li>
           </ul>
@@ -274,6 +304,10 @@ import BaseSectionHeader from '@/components/ui/BaseSectionHeader.astro'
           background-color: var(--blue-color);
           border-radius: 50%;
           opacity: 0.25;
+        }
+
+        a {
+          @include link;
         }
       }
     }
