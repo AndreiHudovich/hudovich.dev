@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /~partytown/
-
-Sitemap: https://hudovich.dev/sitemap-index.xml

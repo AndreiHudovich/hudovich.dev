@@ -1,4 +1,0 @@
-.husky
-dist
-*.json
-src/components/head/Gtag.astro
