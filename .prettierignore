@@ -1,0 +1,6 @@
+.next
+node_modules
+public
+dist
+next-env.d.ts
+*.yaml
