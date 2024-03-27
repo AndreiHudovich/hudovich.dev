@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="h-[1000rem]">
+    <div>
       <h1>Hello, Next.js!</h1>
     </div>
   )

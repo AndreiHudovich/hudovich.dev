@@ -18,16 +18,20 @@
     "format:write": "prettier --write --cache ."
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
     "clsx": "^2.1.0",
     "next": "14.1.4",
+    "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.2.2"
+    "tailwind-merge": "^2.2.2",
+    "tua-body-scroll-lock": "^1.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.69",
     "@types/react-dom": "^18.2.22",
@@ -39,7 +43,7 @@
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.4.2",
     "typescript": "^5.4.3"
   }
 }

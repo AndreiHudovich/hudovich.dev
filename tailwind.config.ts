@@ -3,8 +3,10 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import type { Config } from 'tailwindcss'
 
 export default {
-  content: ['./app/**/*.{ts,tsx}'],
-  darkMode: 'selector',
+  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  darkMode: ['selector', '[data-theme="dark"]'],
+  // Used in "/assets/logo.svg"
+  safelist: ['fill-orange-500', 'fill-dark-blue-950', 'dark:fill-slate-100'],
   theme: {
     colors: {
       inherit: 'inherit',

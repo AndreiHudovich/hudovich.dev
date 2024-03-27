@@ -9,10 +9,12 @@
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^react$",
+    "^next",
     "<THIRD_PARTY_MODULES>",
     "^@/",
     "^[.]",
     "<TYPES>^react$",
+    "<TYPES>^next",
     "<TYPES>",
     "<TYPES>^@/",
     "<TYPES>^[.]"
