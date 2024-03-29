@@ -73,5 +73,9 @@ export default {
       caption: ['1rem', '1.25rem'],
       menu: ['0.875rem', '1.25rem'],
     },
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
+    },
   },
 } satisfies Config
