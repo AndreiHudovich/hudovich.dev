@@ -30,7 +30,7 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
           <button className="p-0.5" type="button" onClick={() => setIsOpen(true)}>
             <BaseIcon
               as={IconLucideMenu}
-              className="size-7 fill-dark-blue-950 dark:fill-slate-100"
+              className="size-7 text-dark-blue-950 dark:text-slate-100"
               label="Open navigation"
             />
           </button>
@@ -59,7 +59,7 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
               >
                 <BaseIcon
                   as={IconLucideX}
-                  className="size-7 fill-dark-blue-950 dark:fill-slate-100"
+                  className="size-7 text-dark-blue-950 dark:text-slate-100"
                   label="Close"
                 />
               </button>

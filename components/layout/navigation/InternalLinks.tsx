@@ -15,7 +15,7 @@ const links: Array<{ href: Route; label: string }> = [
 
 function InternalLinks(props: ComponentPropsWithoutRef<'nav'>) {
   return (
-    <nav {...props}>
+    <nav {...props} aria-label="Main">
       <ul className="flex flex-col gap-4 md:flex-row md:gap-6">
         {links.map(({ href, label }) => (
           <li

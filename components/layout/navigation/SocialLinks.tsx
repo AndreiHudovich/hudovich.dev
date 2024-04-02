@@ -34,7 +34,7 @@ function SocialLinks({ className, ...props }: ComponentPropsWithoutRef<'div'>) {
         >
           <BaseIcon
             as={Icon}
-            className="size-7 fill-dark-blue-950 dark:fill-slate-100 md:size-5"
+            className="size-7 text-dark-blue-950 dark:text-slate-100 md:size-5"
             label={label}
           />
         </a>

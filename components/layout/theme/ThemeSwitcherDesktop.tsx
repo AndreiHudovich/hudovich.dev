@@ -44,7 +44,7 @@ function ThemeSwitcherDesktop() {
         <button className="inline-block p-1.5 size-8" type="button">
           <BaseIcon
             as={IconSolidCircleHalfStroke}
-            className="size-5 fill-dark-blue-950 dark:fill-slate-100"
+            className="size-5 text-dark-blue-950 dark:text-slate-100"
             label="Switch theme"
           />
         </button>
@@ -66,7 +66,7 @@ function ThemeSwitcherDesktop() {
                 >
                   <BaseIcon
                     as={Icon}
-                    className="shrink-0 size-4 fill-dark-blue-950 dark:fill-slate-100"
+                    className="shrink-0 size-4 text-dark-blue-950 dark:text-slate-100"
                   />
                   <span className="font-[375] text-menu text-dark-blue-950 capitalize dark:text-slate-100">
                     {value}
@@ -76,7 +76,7 @@ function ThemeSwitcherDesktop() {
                     <DropdownMenuItemIndicator asChild>
                       <BaseIcon
                         as={IconSolidCheck}
-                        className="shrink-0 ml-auto size-4 fill-orange-500"
+                        className="shrink-0 ml-auto size-4 text-orange-500"
                       />
                     </DropdownMenuItemIndicator>
                   )}

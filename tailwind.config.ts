@@ -1,4 +1,4 @@
-import { neutral, slate } from 'tailwindcss/colors'
+import { slate } from 'tailwindcss/colors'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import type { Config } from 'tailwindcss'
 
@@ -14,8 +14,20 @@ export default {
       transparent: 'transparent',
       black: '#000',
       white: '#fff',
-      neutral,
       slate,
+      neutral: {
+        '50': '#f7f7f7',
+        '100': '#ededed',
+        '200': '#e5e5e5',
+        '300': '#c8c8c8',
+        '400': '#adadad',
+        '500': '#999999',
+        '600': '#888888',
+        '700': '#7b7b7b',
+        '800': '#676767',
+        '900': '#545454',
+        '950': '#363636',
+      },
       blue: {
         '50': '#f2f6fd',
         '100': '#e4ebfa',
@@ -74,7 +86,8 @@ export default {
       menu: ['0.875rem', '1.25rem'],
     },
     screens: {
-      xs: '475px',
+      xxs: '475px',
+      xs: '568px',
       ...defaultTheme.screens,
     },
   },

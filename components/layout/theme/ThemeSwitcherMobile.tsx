@@ -21,13 +21,13 @@ function ThemeSwitcher() {
 
   return (
     <label className="relative flex items-center gap-3 px-3.5 min-w-36 h-[2.8rem] bg-orange-400 rounded-md dark:bg-dark-blue-950">
-      <BaseIcon as={Icon} className="shrink-0 size-5 fill-dark-blue-950 dark:fill-slate-100" />
+      <BaseIcon as={Icon} className="shrink-0 size-5 text-dark-blue-950 dark:text-slate-100" />
 
       <span className="text-body-3 capitalize">{theme}</span>
 
       <BaseIcon
         as={IconSolidChevronDown}
-        className="ml-auto shrink-0 size-3.5 fill-dark-blue-950 dark:fill-slate-100"
+        className="ml-auto shrink-0 size-3.5 text-dark-blue-950 dark:text-slate-100"
       />
 
       <select

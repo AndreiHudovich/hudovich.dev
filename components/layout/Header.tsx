@@ -10,7 +10,7 @@ import BaseIcon from '@/components/ui/BaseIcon.tsx'
 
 function Header() {
   return (
-    <header className="bg-white dark:bg-blue-950">
+    <header>
       <Container className="flex justify-between items-center h-20">
         <Link href="/">
           <BaseIcon as={Logo} className="w-[4.125rem] h-6" label="Home" />
