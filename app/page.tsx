@@ -38,7 +38,7 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
   },
 ]
 
-export default function Page() {
+export default function HomePage() {
   return (
     <Container>
       <section className="mb-11 md:mb-14">
