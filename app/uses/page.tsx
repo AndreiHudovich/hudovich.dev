@@ -155,14 +155,18 @@ export default function TechStackPage() {
                 <li key={label} className="font-medium text-caption md:text-body-3">
                   {label}
                   <span className="font-normal md:font-[350]"> - </span>
-                  <BaseTextLink
-                    className="font-[375] md:font-[350]"
-                    href={link}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {value}
-                  </BaseTextLink>
+                  {link ? (
+                    <BaseTextLink
+                      className="font-[375] md:font-[350]"
+                      href={link}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {value}
+                    </BaseTextLink>
+                  ) : (
+                    <span className="font-[375] md:font-[350]">{value}</span>
+                  )}
                 </li>
               ))}
             </ul>
