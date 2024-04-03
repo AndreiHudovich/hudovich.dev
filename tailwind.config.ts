@@ -1,3 +1,4 @@
+import AnimatePlugin from 'tailwindcss-animate'
 import { slate } from 'tailwindcss/colors'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import type { Config } from 'tailwindcss'
@@ -91,4 +92,5 @@ export default {
       ...defaultTheme.screens,
     },
   },
+  plugins: [AnimatePlugin],
 } satisfies Config

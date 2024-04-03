@@ -1,6 +1,13 @@
 {
   "social": {
     "twitter": "#1",
-    "github": "#2"
-  }
+    "github": "#2",
+    "reddit": "#3",
+    "linkedin": "#4",
+    "upwork": "#5"
+  },
+  "contact": {
+    "email": "hello@hudovich.dev"
+  },
+  "source": "https://github.com/hudovich-dev/hudovich.dev"
 }

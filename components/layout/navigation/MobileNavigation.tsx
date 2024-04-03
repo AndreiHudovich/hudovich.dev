@@ -26,7 +26,7 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
   return (
     <div {...props}>
       <Dialog>
-        <DialogTrigger asChild>
+        <DialogTrigger asChild={true}>
           <button className="p-0.5" type="button" onClick={() => setIsOpen(true)}>
             <BaseIcon
               as={IconLucideMenu}
@@ -39,10 +39,7 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
         <DialogPortal>
           <DialogContent
             ref={contentRef}
-            className={cn(
-              'fixed inset-0 invisible overflow-y-auto grid p-12 h-svh bg-orange-500 opacity-0 transition-all dark:bg-blue-950 md:hidden',
-              isOpen && 'visible opacity-100'
-            )}
+            className="fixed inset-0 overflow-y-auto grid p-12 h-svh bg-orange-500 dark:bg-blue-950 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=closed]:animate-out data-[state=closed]:fade-out"
             style={{
               zIndex: zIndexMobileNavigation,
             }}
@@ -51,9 +48,9 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
           >
             <div className="m-auto">{children}</div>
 
-            <DialogClose asChild>
+            <DialogClose asChild={true}>
               <button
-                className="absolute top-6 right-5 p-0.5"
+                className="absolute top-[1.375rem] right-5 p-0.5"
                 type="button"
                 onClick={() => setIsOpen(false)}
               >

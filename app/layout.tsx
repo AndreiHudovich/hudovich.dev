@@ -15,10 +15,10 @@ const outfit = Outfit({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={cn(outfit.variable, 'h-full')} suppressHydrationWarning={true}>
-      <body className="h-full bg-white antialiased text-dark-blue-950 dark:bg-blue-950 dark:text-slate-300">
+      <body className="h-full min-h-full bg-white font-[350] text-dark-blue-950 antialiased dark:bg-blue-950 dark:text-slate-300">
         <ThemeProvider>
           <Header />
-          <main>{children}</main>
+          <main className="pt-8 pb-16 md:pt-16 md:pb-24">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -40,7 +40,7 @@ function ThemeSwitcherDesktop() {
 
   return (
     <DropdownMenu modal={false}>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild={true}>
         <button className="inline-block p-1.5 size-8" type="button">
           <BaseIcon
             as={IconSolidCircleHalfStroke}
@@ -73,7 +73,7 @@ function ThemeSwitcherDesktop() {
                   </span>
 
                   {theme === value && (
-                    <DropdownMenuItemIndicator asChild>
+                    <DropdownMenuItemIndicator asChild={true}>
                       <BaseIcon
                         as={IconSolidCheck}
                         className="shrink-0 ml-auto size-4 text-orange-500"
