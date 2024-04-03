@@ -1,13 +1,14 @@
 {
   "social": {
-    "twitter": "#1",
-    "github": "#2",
-    "reddit": "#3",
-    "linkedin": "#4",
-    "upwork": "#5"
+    "twitter": "https://twitter.com/hudovich_dev",
+    "github": "https://github.com/hudovich-dev",
+    "reddit": "https://www.reddit.com/user/AndreiHudovich/",
+    "linkedin": "https://www.linkedin.com/in/hudovich-dev/",
+    "upwork": "https://www.upwork.com/freelancers/andrei"
   },
   "contact": {
-    "email": "hello@hudovich.dev"
+    "email": "hello@hudovich.dev",
+    "dm": "https://dm.new/hudovich_dev"
   },
   "source": "https://github.com/hudovich-dev/hudovich.dev"
 }
