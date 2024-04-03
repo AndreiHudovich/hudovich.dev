@@ -6,8 +6,18 @@ import type { Config } from 'tailwindcss'
 export default {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   darkMode: ['selector', '[data-theme="dark"]'],
-  // Used in "/assets/logo.svg"
-  safelist: ['fill-orange-500', 'fill-dark-blue-950', 'dark:fill-slate-100'],
+  // Used in "/assets"
+  safelist: [
+    'fill-dark-blue-950',
+    'fill-neutral-200',
+    'fill-orange-300',
+    'fill-orange-400',
+    'fill-orange-500',
+    'fill-white',
+    'dark:fill-blue-950',
+    'dark:fill-neutral-900',
+    'dark:fill-slate-100',
+  ],
   theme: {
     colors: {
       inherit: 'inherit',
