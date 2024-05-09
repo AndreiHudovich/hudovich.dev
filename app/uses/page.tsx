@@ -132,7 +132,7 @@ const data = [
   },
 ]
 
-export default function TechStackPage() {
+export default function UsesPage() {
   return (
     <Container>
       <section className="mb-8">

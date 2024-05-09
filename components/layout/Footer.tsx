@@ -43,7 +43,7 @@ function Footer() {
     <footer className="sticky top-[100svh] border-t border-t-neutral-200 dark:border-t-slate-800">
       <Container
         className="pt-5 pb-6 sm:flex sm:flex-row-reverse sm:justify-between sm:items-center sm:h-20"
-        fluid={true}
+        isFluid={true}
       >
         <nav className="mb-4 sm:mb-0" aria-label="Secondary">
           <ul className="flex justify-center items-center gap-2 md:gap-4">

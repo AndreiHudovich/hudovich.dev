@@ -4,12 +4,18 @@ import type { ReactNode } from 'react'
 interface ContainerProps {
   children: ReactNode
   className?: string
-  fluid?: boolean
+  isFluid?: boolean
 }
 
-function Container({ children, className, fluid }: ContainerProps) {
+function Container({ children, className, isFluid }: ContainerProps) {
   return (
-    <div className={cn('mx-auto px-5', fluid ? 'w-full' : 'max-w-[42.5rem]', className)}>
+    <div
+      className={cn(
+        'mx-auto px-5 w-full md:px-8',
+        !isFluid && 'max-w-[45rem] md:max-w-[46.5rem]',
+        className
+      )}
+    >
       {children}
     </div>
   )

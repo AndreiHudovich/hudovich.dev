@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+  <path fill="url(#logo-workers-a)" d="m8.228 1.986 3.77 6.801-3.463 6.232a2 2 0 0 0 0 1.947l3.463 6.247-3.77 6.802a4 4 0 0 1-1.693-1.593L.534 17.997a4.02 4.02 0 0 1 0-4.001l6-10.425a4 4 0 0 1 1.694-1.585"/>
+  <path fill="url(#logo-workers-b)" d="M8.535 15.027a2 2 0 0 0 0 1.939l3.463 6.247-3.77 6.802a4 4 0 0 1-1.693-1.593L.534 17.997c-.477-.823 2.193-1.808 8.001-2.963z" opacity=".7"/>
+  <path fill="url(#logo-workers-c)" d="m8.612 2.67 3.386 6.117-.562.977L8.451 4.71c-.862-1.408-2.178-.677-3.824 2.17l.246-.423L6.535 3.57a4 4 0 0 1 1.677-1.585l.393.684z" opacity=".5"/>
+  <path fill="url(#logo-workers-d)" d="m25.462 3.57 6.001 10.426a4 4 0 0 1 0 4l-6 10.426a4 4 0 0 1-3.463 2h-6.001l7.463-13.456a2 2 0 0 0 0-1.94L15.999 1.57h6a4 4 0 0 1 3.463 2"/>
+  <path fill="url(#logo-workers-e)" d="m21.692 30.376-5.924.054 7.17-13.526a2.08 2.08 0 0 0 0-1.954l-7.17-13.38h1.354l7.524 13.318a2.08 2.08 0 0 1-.007 2.062q-2.43 4.222-4.824 8.464c-1.462 2.57-.831 4.224 1.877 4.962"/>
+  <path fill="url(#logo-workers-f)" d="M9.997 30.422a4.1 4.1 0 0 1-1.77-.407l7.402-13.35a1.38 1.38 0 0 0 0-1.338L8.228 1.986a4 4 0 0 1 1.77-.416h6l7.464 13.457a2 2 0 0 1 0 1.939l-7.464 13.456z"/>
+  <path fill="url(#logo-workers-g)" d="M22.939 15.327 15.306 1.57H16l7.463 13.457a2 2 0 0 1 0 1.939L16 30.422h-.693l7.633-13.756a1.38 1.38 0 0 0 0-1.34" opacity=".6"/>
+  <path fill="url(#logo-workers-h)" d="M15.63 15.327 8.227 1.985c.23-.123.507-.215.769-.292q2.445 4.4 7.232 13.334a2 2 0 0 1 0 1.939L8.882 30.268c-.262-.076-.4-.13-.647-.246l7.386-13.349a1.38 1.38 0 0 0 0-1.338z" opacity=".6"/>
+  <defs>
+    <linearGradient id="logo-workers-a" x1="599.882" x2="-628.946" y1="2804.89" y2="828.64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EB6F07"/>
+      <stop offset="1" stop-color="#FAB743"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-b" x1="933.456" x2="300.748" y1="1269.51" y2="618.786" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D96504"/>
+      <stop offset="1" stop-color="#D96504" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-c" x1="314.201" x2="649.144" y1="69.659" y2="607.702" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EB6F07"/>
+      <stop offset="1" stop-color="#EB720A" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-d" x1="816.073" x2="-284.241" y1="2886.8" y2="594.028" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EE6F05"/>
+      <stop offset="1" stop-color="#FAB743"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-e" x1="-287.975" x2="1473.73" y1="2887.57" y2="2440.43" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D96504" stop-opacity=".8"/>
+      <stop offset=".498" stop-color="#D96504" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#D96504" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-f" x1="782.459" x2="-340.319" y1="2886.8" y2="622.794" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFA95F"/>
+      <stop offset="1" stop-color="#FFEBC8"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-g" x1="83.396" x2="1019.72" y1="33.308" y2="180.509" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="logo-workers-h" x1="-104.829" x2="769.625" y1="2979.24" y2="1982.85" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+  <g clip-path="url(#logo-supabase-a)">
+    <path fill="url(#logo-supabase-b)" d="M18.604 31.321c-.81 1.02-2.451.461-2.471-.841l-.285-19.045h12.805c2.32 0 3.613 2.68 2.171 4.496z"/>
+    <path fill="url(#logo-supabase-c)" fill-opacity=".2" d="M18.604 31.321c-.81 1.02-2.451.461-2.471-.841l-.285-19.045h12.805c2.32 0 3.613 2.68 2.171 4.496z"/>
+    <path fill="#3ECF8E" d="M13.396.677c.81-1.02 2.452-.461 2.471.84l.125 19.045H3.347c-2.32 0-3.613-2.679-2.17-4.495z"/>
+  </g>
+  <defs>
+    <linearGradient id="logo-supabase-b" x1="15.848" x2="27.229" y1="15.658" y2="20.431" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#249361"/>
+      <stop offset="1" stop-color="#3ECF8E"/>
+    </linearGradient>
+    <linearGradient id="logo-supabase-c" x1="10.802" x2="15.992" y1="8.749" y2="18.52" gradientUnits="userSpaceOnUse">
+      <stop/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="logo-supabase-a">
+      <path fill="#fff" d="M0 0h32v32H0z"/>
+    </clipPath>
+  </defs>
+</svg>

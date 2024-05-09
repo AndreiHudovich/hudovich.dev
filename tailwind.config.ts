@@ -8,12 +8,14 @@ export default {
   darkMode: ['selector', '[data-theme="dark"]'],
   // Used in "/assets"
   safelist: [
+    'fill-black',
+    'fill-white',
     'fill-dark-blue-950',
     'fill-neutral-200',
     'fill-orange-300',
     'fill-orange-400',
     'fill-orange-500',
-    'fill-white',
+    'dark:fill-white',
     'dark:fill-blue-950',
     'dark:fill-neutral-900',
     'dark:fill-slate-100',

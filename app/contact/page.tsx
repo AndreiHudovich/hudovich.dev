@@ -10,7 +10,7 @@ export default function ContactPage() {
         <h1 className="mb-1 font-bold text-heading-2 md:text-heading-1">Get in touch</h1>
         <p className="mb-4 text-body-2 md:mb-5 md:text-body-1">
           Do you have an exciting project?
-          <br className="xxs:hidden" /> Let’s talk!
+          <br className="xxs:hidden" /> Let&apos;s talk!
         </p>
 
         <BaseSeparator className="mb-9 md:mb-8" />
