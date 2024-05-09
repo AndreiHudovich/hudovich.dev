@@ -27,7 +27,7 @@ const data = [
       {
         label: 'Speakers',
         value: 'Audioengine A1 Wireless',
-        link: 'https://audioengine.com/shop/wirelessspeakers/a1-wireless-speaker-system/',
+        link: 'https://audioengineeu.com/products/audioengine-a1-mr-bluetooth-bookshelf-speakers-powered-bluetooth-stereo-speakers-for-home-surround-sound-system-includes-aux-inputs-for-pc-speakers-turntable-speakers-and-subwoofer-pair-grey',
       },
       {
         label: 'Mouse',
@@ -176,11 +176,21 @@ export default function UsesPage() {
         <p className="mt-1 text-neutral-900 dark:text-slate-300 md:col-span-2 md:mt-2">
           <small className="font-[375] text-caption">
             <span className="text-orange-500">*</span> Inspired by{' '}
-            <BaseTextLink href="https://wesbos.com/" rel="noreferrer" target="_blank">
+            <BaseTextLink
+              className="after:-bottom-0.5"
+              href="https://wesbos.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
               Wes Bos
             </BaseTextLink>{' '}
             and his cool project -{' '}
-            <BaseTextLink href="https://uses.tech/" rel="noreferrer" target="_blank">
+            <BaseTextLink
+              className="after:-bottom-0.5"
+              href="https://uses.tech/"
+              rel="noreferrer"
+              target="_blank"
+            >
               https://uses.tech/
             </BaseTextLink>
           </small>
