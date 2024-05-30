@@ -51,7 +51,7 @@ export default function HomePage() {
         <p className="mb-4 text-body-2 sm:max-w-xl md:mb-5 md:max-w-none md:text-body-1">
           A freelance full-stack engineer based in Wroclaw, Poland. I&nbsp;specialize in developing
           applications using React ecosystem. Currently, I&apos;m&nbsp;leading the front-end team
-          at&nbsp;<a className="border-b border-b-dark-blue-950 dark:border-b-slate-300" href="https://propbar.co.uk/" rel="noreferrer" target="_blank">Propbar</a>.
+          at&nbsp;<BaseTextLink href="https://propbar.co.uk/" rel="noreferrer" target="_blank">Propbar</BaseTextLink>.
         </p>
 
         <BaseSeparator />
@@ -61,14 +61,17 @@ export default function HomePage() {
         <h2 className="mb-3 font-medium text-heading-5">Find me on</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-2.5 md:gap-6">
           {linksList.map(({ Icon, href, label }) => (
-            <li key={label}>
+            <li key={label} className="group">
               <a
-                className="flex items-center gap-x-2 min-w-[6.25rem] text-body-3 md:min-w-0"
+                className="flex items-center gap-x-2 min-w-[6.25rem] text-body-3 transition-colors dark:group-hover:text-white md:min-w-0"
                 href={href}
                 rel="noreferrer"
                 target="_blank"
               >
-                <BaseIcon as={Icon} className="size-5 text-dark-blue-950 dark:text-slate-300" />
+                <BaseIcon
+                  as={Icon}
+                  className="size-5 text-dark-blue-950 transition-colors dark:text-slate-300 dark:group-hover:text-white"
+                />
                 {label}
               </a>
             </li>

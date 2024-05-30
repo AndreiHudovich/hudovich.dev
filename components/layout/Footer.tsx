@@ -50,7 +50,7 @@ function Footer() {
             {textLinks.map(({ href, label }) => (
               <li key={label}>
                 <Link
-                  className="block px-2 py-1 font-normal text-caption text-neutral-900 dark:text-slate-300"
+                  className="block px-2 py-1 font-normal text-caption text-neutral-900 transition-colors hover:text-dark-blue-950 dark:text-slate-300 dark:hover:text-white"
                   href={href}
                 >
                   {label}
@@ -61,18 +61,18 @@ function Footer() {
             {iconLinks.map(({ href, label, Icon, isExternal }) => (
               <li key={label}>
                 {isExternal ? (
-                  <a className="block p-1.5" href={href} rel="noreferrer" target="_blank">
+                  <a className="group block p-1.5" href={href} rel="noreferrer" target="_blank">
                     <BaseIcon
                       as={Icon}
-                      className="size-4 text-neutral-900 dark:text-slate-300"
+                      className="size-4 text-neutral-900 transition-colors group-hover:text-dark-blue-950 dark:text-slate-300 dark:group-hover:text-white"
                       label={label}
                     />
                   </a>
                 ) : (
-                  <Link className="block p-1.5" href={href as Route}>
+                  <Link className="group block p-1.5" href={href as Route}>
                     <BaseIcon
                       as={Icon}
-                      className="size-4 text-neutral-900 dark:text-slate-300"
+                      className="size-4 text-neutral-900 transition-colors group-hover:text-dark-blue-950 dark:text-slate-300 dark:group-hover:text-white"
                       label={label}
                     />
                   </Link>
