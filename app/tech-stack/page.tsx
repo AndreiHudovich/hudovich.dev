@@ -1,4 +1,5 @@
 import Container from '@/components/layout/Container.tsx'
+import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
 
@@ -79,10 +80,7 @@ export default function TechStackPage() {
   return (
     <Container>
       <section className="mb-8">
-        <h1 className="mb-1 font-bold text-heading-2 md:text-heading-1">Tech Stack</h1>
-        <p className="mb-4 text-body-2 md:mb-5 md:text-body-1">
-          The set of tools under the hood of this website.
-        </p>
+        <PageIntro heading="Tech Stack" text="The set of tools under the hood of this website." />
         <BaseSeparator />
       </section>
 

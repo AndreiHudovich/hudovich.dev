@@ -3,6 +3,7 @@ import IconFlagUSA from '@/assets/flags/flag-usa.svg'
 import IconFlagWorldwide from '@/assets/flags/flag-worldwide.svg'
 import IconSolidFilePdf from '@/assets/icons/icon-solid-file-pdf.svg'
 import Container from '@/components/layout/Container.tsx'
+import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
@@ -267,12 +268,12 @@ export default function ResumePage() {
   return (
     <Container>
       <section className="mb-11 md:mb-14">
-        <h1 className="mb-3 font-bold text-heading-2 md:text-heading-1">My Resume / CV</h1>
-        <p className="mb-4 text-body-2 md:mb-5 md:text-body-1">
-          I&apos;m a highly skilled full-stack engineer with more than 8 years of experience in
+        <PageIntro
+          heading="My Resume / CV"
+          text="I'm a highly skilled full-stack engineer with more than 8 years of experience in
           building web applications. On this page, you can learn more about my knowledge stack and
-          my previous work experience.
-        </p>
+          my previous work experience."
+        />
         <BaseSeparator />
       </section>
 

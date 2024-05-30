@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { format, parseISO } from 'date-fns'
 import IconSolidLocationDot from '@/assets/icons/icon-solid-location-dot.svg'
 import Container from '@/components/layout/Container.tsx'
+import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 
@@ -246,11 +247,11 @@ export default function HikingPage() {
     <>
       <section className="mb-10">
         <Container>
-          <h1 className="mb-1 font-bold text-heading-2 md:text-heading-1">Hiking Diary</h1>
-          <p className="mb-4 text-body-2 md:mb-5 md:text-body-1">
-            I love exploring mountain trails. Every hike offers new challenges and breathtaking
-            scenery, making it the ideal way to spend a weekend.
-          </p>
+          <PageIntro
+            heading="Hiking Diary"
+            text="I love exploring mountain trails. Every hike offers new challenges and breathtaking
+            scenery, making it the ideal way to spend a weekend."
+          />
           <BaseSeparator />
         </Container>
       </section>
