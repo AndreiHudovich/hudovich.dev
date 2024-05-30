@@ -10,9 +10,10 @@ import {
 } from '@radix-ui/react-dialog'
 import IconLucideMenu from '@/assets/icons/icon-lucide-menu.svg'
 import IconLucideX from '@/assets/icons/icon-lucide-x.svg'
+import InternalLinks from '@/components/layout/navigation/InternalLinks.tsx'
 import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import useBodyScrollLock from '@/hooks/useBodyScrollLock.ts'
-import { cn, zIndexMobileNavigation } from '@/utils/css.ts'
+import { zIndexMobileNavigation } from '@/utils/css.ts'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 
 interface MobileNavigationProps extends ComponentPropsWithoutRef<'div'> {
@@ -25,7 +26,7 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
 
   return (
     <div {...props}>
-      <Dialog>
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild={true}>
           <button className="p-0.5" type="button" onClick={() => setIsOpen(true)}>
             <BaseIcon
@@ -46,7 +47,10 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
             aria-labelledby={undefined}
             aria-describedby={undefined}
           >
-            <div className="m-auto">{children}</div>
+            <div className="m-auto">
+              <InternalLinks className="mb-6" onClick={() => setIsOpen(false)} />
+              {children}
+            </div>
 
             <DialogClose asChild={true}>
               <button

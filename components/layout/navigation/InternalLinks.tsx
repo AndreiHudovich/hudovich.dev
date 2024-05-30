@@ -13,7 +13,11 @@ const links: Array<{ href: Route; label: string }> = [
   },
 ]
 
-function InternalLinks(props: ComponentPropsWithoutRef<'nav'>) {
+interface InternalLinksProps extends ComponentPropsWithoutRef<'nav'> {
+  onClick?: () => void
+}
+
+function InternalLinks({ onClick, ...props }: InternalLinksProps) {
   return (
     <nav {...props} aria-label="Main">
       <ul className="flex flex-col gap-4 md:flex-row md:gap-6">
@@ -25,6 +29,7 @@ function InternalLinks(props: ComponentPropsWithoutRef<'nav'>) {
             <Link
               className="block px-3 py-2 text-dark-blue-950 dark:text-slate-100 md:px-2 md:py-1"
               href={href}
+              onClick={onClick}
             >
               {label}
             </Link>

@@ -17,7 +17,6 @@ function Header() {
         </Link>
 
         <MobileNavigation className="md:hidden">
-          <InternalLinks className="mb-6" />
           <SocialLinks className="mb-10" />
           <ThemeSwitcherMobile />
         </MobileNavigation>
