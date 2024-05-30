@@ -47,6 +47,8 @@ function MobileNavigation({ children, className, ...props }: MobileNavigationPro
             style={{
               zIndex: zIndexMobileNavigation,
             }}
+            // Auto focus automatically opens theme switcher on mobile
+            onOpenAutoFocus={(event) => event.preventDefault()}
             aria-labelledby={undefined}
             aria-describedby={undefined}
           >
