@@ -16,6 +16,7 @@ function Header() {
           <BaseIcon as={Logo} className="w-[4.125rem] h-6" label="Home" />
         </Link>
 
+        {/* `className` is applied to both root and DialogContent */}
         <MobileNavigation className="md:hidden">
           <SocialLinks className="mb-10" />
           <ThemeSwitcherMobile />

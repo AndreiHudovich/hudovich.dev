@@ -13,19 +13,19 @@ import IconLucideX from '@/assets/icons/icon-lucide-x.svg'
 import InternalLinks from '@/components/layout/navigation/InternalLinks.tsx'
 import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import useBodyScrollLock from '@/hooks/useBodyScrollLock.ts'
-import { zIndexMobileNavigation } from '@/utils/css.ts'
+import { cn, zIndexMobileNavigation } from '@/utils/css.ts'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 
 interface MobileNavigationProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode
 }
 
-function MobileNavigation({ children, ...props }: MobileNavigationProps) {
+function MobileNavigation({ children, className, ...props }: MobileNavigationProps) {
   const contentRef = useRef<HTMLDivElement>(null)
   const { isOpen, setIsOpen } = useBodyScrollLock(contentRef)
 
   return (
-    <div {...props}>
+    <div className={className} {...props}>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild={true}>
           <button className="p-0.5" type="button" onClick={() => setIsOpen(true)}>
@@ -40,7 +40,10 @@ function MobileNavigation({ children, ...props }: MobileNavigationProps) {
         <DialogPortal>
           <DialogContent
             ref={contentRef}
-            className="fixed inset-0 overflow-y-auto grid p-12 h-svh bg-orange-500 dark:bg-blue-950 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=closed]:animate-out data-[state=closed]:fade-out"
+            className={cn(
+              'fixed inset-0 overflow-y-auto grid p-12 h-svh bg-orange-500 dark:bg-blue-950 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=closed]:animate-out data-[state=closed]:fade-out',
+              className
+            )}
             style={{
               zIndex: zIndexMobileNavigation,
             }}
