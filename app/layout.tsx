@@ -5,12 +5,17 @@ import Footer from '@/components/layout/Footer.tsx'
 import Header from '@/components/layout/Header.tsx'
 import { cn } from '@/utils/css.ts'
 import type { ReactNode } from 'react'
+import type { Metadata } from 'next'
 
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
 })
+
+export const metadata: Metadata = {
+  description: 'The personal website of Andrei Hudovich, a freelance full stack engineer.',
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

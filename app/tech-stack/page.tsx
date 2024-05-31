@@ -2,6 +2,7 @@ import Container from '@/components/layout/Container.tsx'
 import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
+import type { Metadata } from 'next'
 
 const data = [
   {
@@ -75,6 +76,10 @@ const data = [
     ],
   },
 ]
+
+export const metadata: Metadata = {
+  title: 'Tech Stack | Andrei Hudovich',
+}
 
 export default function TechStackPage() {
   return (

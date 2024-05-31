@@ -2,6 +2,11 @@ import NotFound from '@/assets/not-found.svg'
 import Container from '@/components/layout/Container.tsx'
 import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '404 | Andrei Hudovich',
+}
 
 export default function NotFoundPage() {
   return (

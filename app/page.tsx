@@ -9,6 +9,7 @@ import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
 import links from '@/data/links.json'
 import type { FC, SVGProps } from 'react'
+import type { Metadata } from 'next'
 
 const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGElement>> }> = [
   {
@@ -38,6 +39,10 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
   },
 ]
 
+export const metadata: Metadata = {
+  title: 'Andrei Hudovich',
+}
+
 export default function HomePage() {
   return (
     <Container>
@@ -49,9 +54,9 @@ export default function HomePage() {
 
         {/* prettier-ignore */}
         <p className="mb-4 text-body-2 sm:max-w-xl md:mb-5 md:max-w-none md:text-body-1">
-          A freelance full-stack engineer based in Wroclaw, Poland. I&nbsp;specialize in developing
+          A freelance full stack engineer based in Wroclaw, Poland. I&nbsp;specialize in developing
           applications using React ecosystem. Currently, I&apos;m&nbsp;leading the front-end team
-          at&nbsp;<BaseTextLink href="https://propbar.co.uk/" rel="noreferrer" target="_blank">Propbar</BaseTextLink>.
+          at&nbsp;Propbar.
         </p>
 
         <BaseSeparator />

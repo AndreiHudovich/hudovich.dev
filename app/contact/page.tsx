@@ -3,6 +3,11 @@ import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
 import links from '@/data/links.json'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact | Andrei Hudovich',
+}
 
 export default function ContactPage() {
   return (
