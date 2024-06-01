@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 66 24">
+  <path className="fill-dark-blue-950 dark:fill-slate-100" d="M47.02 22V2h5.618v20zm12.078 0V2h5.618v20zm-9.017-7.865V9.472H61.29v4.663zM24.148 22l7.613-20h5.73l7.528 20h-5.843l-5.59-16.994h2.023L29.88 22zm4.944-3.37v-4.383h11.18v4.382z"/>
+  <path className="fill-orange-500" d="m10.491 24 6-24h4.657l-6 24zM0 24 6 0h4.657l-6 24z"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+  <g clip-path="url(#logo-nextjs-a)">
+    <mask id="logo-nextjs-b" width="32" height="32" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+      <path fill="#000" d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16"/>
+    </mask>
+    <g mask="url(#logo-nextjs-b)">
+      <path fill="#000" d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16"/>
+      <path fill="url(#logo-nextjs-c)" d="M26.58 28.003 12.291 9.6H9.6v12.795h2.153v-10.06l13.136 16.97a16 16 0 0 0 1.69-1.302"/>
+      <path fill="url(#logo-nextjs-d)" d="M22.578 9.6h-2.133v12.8h2.133z"/>
+    </g>
+  </g>
+  <defs>
+    <linearGradient id="logo-nextjs-c" x1="19.378" x2="25.689" y1="20.711" y2="28.533" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="logo-nextjs-d" x1="21.511" x2="21.476" y1="9.6" y2="19" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="logo-nextjs-a">
+      <path fill="#fff" d="M0 0h32v32H0z"/>
+    </clipPath>
+  </defs>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20">
+  <rect width="28" height="20" fill="#fff" rx="2"/>
+  <mask id="flag-uk-a" width="28" height="20" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+    <rect width="28" height="20" fill="#fff" rx="2"/>
+  </mask>
+  <g mask="url(#flag-uk-a)">
+    <path fill="#0A17A7" d="M0 0h28v20H0z"/>
+    <path fill="#fff" fill-rule="evenodd" d="m-1.282-1.916 11.949 8.06v-7.477h6.667v7.476l11.949-8.06 1.49 2.211-9.446 6.373H28v6.666h-6.674l9.448 6.373-1.491 2.21-11.95-8.06v7.477h-6.666v-7.476l-11.95 8.06-1.49-2.211 9.447-6.373H0V6.667h6.674L-2.773.294z" clip-rule="evenodd"/>
+    <path stroke="#DB1F35" stroke-linecap="round" stroke-width=".667" d="M18.668 6.332 31.333-2m-11.32 15.698 11.353 7.652M8.006 6.31-3.837-1.67M9.29 13.605-3.837 22.31"/>
+    <path fill="#E6273E" fill-rule="evenodd" d="M0 12h12v8h4v-8h12V8H16V0h-4v8H0z" clip-rule="evenodd"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "importOrderTypeScriptVersion": "5.0.0",
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^react$",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@/",
+    "^[.]",
+    "<TYPES>^react$",
+    "<TYPES>^next",
+    "<TYPES>",
+    "<TYPES>^@/",
+    "<TYPES>^[.]"
+  ]
+}

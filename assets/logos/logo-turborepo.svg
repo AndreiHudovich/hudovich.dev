@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+  <g clip-path="url(#logo-turborepo-a)">
+    <path class="fill-black dark:fill-white" d="M15.993 6.008c-5.505 0-9.985 4.48-9.985 9.985s4.48 9.985 9.985 9.985c5.506 0 9.985-4.48 9.985-9.985 0-5.506-4.48-9.985-9.985-9.985m0 15.152a5.167 5.167 0 1 1 0-10.334 5.167 5.167 0 1 1 0 10.334"/>
+    <path fill="url(#logo-turborepo-b)" fill-rule="evenodd" d="M16.83 4.368V.64c8.103.433 14.54 7.142 14.54 15.353S24.933 30.91 16.83 31.346v-3.728c6.039-.432 10.821-5.478 10.821-11.625S22.87 4.799 16.83 4.368M7.187 23.616A11.6 11.6 0 0 1 4.37 16.83H.64a15.3 15.3 0 0 0 3.907 9.425l2.638-2.639zm7.97 7.73v-3.728a11.6 11.6 0 0 1-6.79-2.817L5.73 27.439a15.3 15.3 0 0 0 9.426 3.907z" clip-rule="evenodd"/>
+  </g>
+  <defs>
+    <linearGradient id="logo-turborepo-b" x1="17.432" x2="2.319" y1="2.799" y2="17.912" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0096FF"/>
+      <stop offset="1" stop-color="#FF1E56"/>
+    </linearGradient>
+    <clipPath id="logo-turborepo-a">
+      <path fill="#fff" d="M0 0h32v32H0z"/>
+    </clipPath>
+  </defs>
+</svg>

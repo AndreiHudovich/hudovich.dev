@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20">
+  <rect width="28" height="20" fill="#fff" rx="2"/>
+  <mask id="flag-worldwide-a" width="28" height="20" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+    <rect width="28" height="20" fill="#fff" rx="2"/>
+  </mask>
+  <g mask="url(#flag-worldwide-a)">
+    <path fill="#19BFBF" d="M0 0h28v20H0z"/>
+    <path fill="#fff" fill-rule="evenodd" d="M14 17.333a7.333 7.333 0 1 0 0-14.667 7.333 7.333 0 0 0 0 14.667m5.963-6.666a6 6 0 0 1-3.746 4.91c.65-1.324 1.03-3.049 1.103-4.91zm-3.978 0c-.097 2.249-.684 4.236-1.6 5.32a6 6 0 0 1-.77 0c-.916-1.084-1.504-3.071-1.6-5.32zm-5.305 0c.073 1.861.452 3.586 1.103 4.91a6 6 0 0 1-3.747-4.91zm1.334-1.334h3.972c-.098-2.249-.685-4.236-1.6-5.32a6 6 0 0 0-.772 0c-.915 1.084-1.503 3.071-1.6 5.32m-.231-4.91c-.65 1.324-1.03 3.049-1.103 4.91H8.036a6 6 0 0 1 3.747-4.91m8.18 4.91H17.32c-.073-1.861-.453-3.586-1.103-4.91a6 6 0 0 1 3.746 4.91" clip-rule="evenodd"/>
+  </g>
+</svg>
