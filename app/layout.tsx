@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import { ThemeProvider } from 'next-themes'
 import { Outfit } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import GreetingLog from '@/components/GreetingLog.tsx'
 import Footer from '@/components/layout/Footer.tsx'
 import Header from '@/components/layout/Header.tsx'
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="pt-8 pb-16 md:pt-16 md:pb-24">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
