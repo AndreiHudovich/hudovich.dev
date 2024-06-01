@@ -50,7 +50,7 @@ export default function HomePage() {
   return (
     <Container>
       <section className="mb-11 md:mb-14">
-        <h1 className="mb-3 font-bold text-heading-2 md:text-heading-1">
+        <h1 className="mb-3 font-bold text-heading-2 dark:text-slate-100 md:text-heading-1">
           Hey, <br className="sm:hidden" />
           I’m <span className="text-orange-500">Andrei Hudovich</span>!
         </h1>
@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <section className="mb-11">
-        <h2 className="mb-3 font-medium text-heading-5">Find me on</h2>
+        <h2 className="mb-3 font-medium text-heading-5 dark:text-slate-100">Find me on</h2>
         <ul className="flex flex-wrap gap-x-4 gap-y-2.5 md:gap-6">
           {linksList.map(({ Icon, href, label }) => (
             <li key={label} className="group">
@@ -88,10 +88,13 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2 className="mb-1 font-medium text-heading-5">Contact</h2>
+        <h2 className="mb-1 font-medium text-heading-5 dark:text-slate-100">Contact</h2>
         <p className="text-body-3 md:text-body-2">
           You can reach me out anytime at{' '}
-          <BaseTextLink className="font-medium" href={`mailto:${links.contact.email}`}>
+          <BaseTextLink
+            className="font-medium dark:text-slate-100"
+            href={`mailto:${links.contact.email}`}
+          >
             {links.contact.email}
           </BaseTextLink>
         </p>

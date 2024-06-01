@@ -287,7 +287,7 @@ export default function ResumePage() {
       </section>
 
       <section className="mb-12 md:mb-16">
-        <h2 className="mb-2 font-semibold text-heading-3">Skills</h2>
+        <h2 className="mb-2 font-semibold text-heading-3 dark:text-slate-100">Skills</h2>
         <p className="mb-8 text-body-3 md:text-body-2">
           Here are the frameworks, libraries, services and runtimes I have experience with. This is
           not a complete list! I&apos;m constantly gaining new skills, and hence it can be a little
@@ -320,13 +320,13 @@ export default function ResumePage() {
 
       <section>
         <div className="mb-8">
-          <h2 className="mb-2 font-semibold text-heading-3">Work History</h2>
+          <h2 className="mb-2 font-semibold text-heading-3 dark:text-slate-100">Work History</h2>
           <p className="text-body-3 md:text-body-2">
             Below you will find a summary of my past employment experience. Additionally, if you
             require, you can{' '}
             <span className="inline-flex items-center gap-1.5">
               <BaseTextLink
-                className="font-medium"
+                className="font-medium dark:text-slate-100"
                 href="/resume.pdf"
                 download="Andrei_Hudovich_-_Lead_Full_Stack_Engineer_-_Resume.pdf"
               >
@@ -353,7 +353,9 @@ export default function ResumePage() {
               </span>
 
               <div className="mb-2 text-dark-blue-950 dark:text-slate-100">
-                <h3 className="mb-0.5 font-medium text-heading-5">{item.title}</h3>
+                <h3 className="mb-0.5 font-medium text-heading-5 dark:text-slate-100">
+                  {item.title}
+                </h3>
 
                 <div className="flex items-center gap-2 font-[375] text-caption md:gap-2.5 md:text-body-3">
                   {item.meta.company.link ? (

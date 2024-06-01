@@ -99,11 +99,14 @@ export default function TechStackPage() {
             key={heading}
             className="px-6 pt-4 pb-6 bg-orange-500/15 rounded-xl dark:bg-dark-blue-950/50 sm:last:col-span-2"
           >
-            <h2 className="mb-3 font-semibold text-heading-5 md:text-heading-4">{heading}</h2>
+            <h2 className="mb-3 font-semibold text-heading-5 dark:text-slate-100 md:text-heading-4">
+              {heading}
+            </h2>
+
             <ul className="grid gap-y-3 md:gap-y-1.5">
               {list.map(({ label, link, value }) => (
                 <li key={label} className="font-medium text-caption md:text-body-3">
-                  {label}
+                  <span className="dark:text-slate-100">{label}</span>
                   <span className="font-normal md:font-[350]"> - </span>
                   <BaseTextLink
                     className="font-[375] md:font-[350]"

@@ -156,11 +156,14 @@ export default function UsesPage() {
             key={heading}
             className="px-6 pt-4 pb-6 bg-orange-500/15 rounded-xl dark:bg-dark-blue-950/50 sm:last:col-span-2 md:first:col-span-2 md:[&:nth-child(2)]:col-span-2"
           >
-            <h2 className="mb-3 font-semibold text-heading-5 md:text-heading-4">{heading}</h2>
+            <h2 className="mb-3 font-semibold text-heading-5 dark:text-slate-100 md:text-heading-4">
+              {heading}
+            </h2>
+
             <ul className="grid gap-y-3 md:gap-y-1.5">
               {list.map(({ label, link, value }) => (
                 <li key={label} className="font-medium text-caption md:text-body-3">
-                  {label}
+                  <span className="dark:text-slate-100">{label}</span>
                   <span className="font-normal md:font-[350]"> - </span>
                   {link ? (
                     <BaseTextLink
@@ -184,7 +187,7 @@ export default function UsesPage() {
           <small className="font-[375] text-caption">
             <span className="text-orange-500">*</span> Inspired by{' '}
             <BaseTextLink
-              className="after:-bottom-0.5"
+              className="dark:text-slate-100 after:-bottom-0.5"
               href="https://wesbos.com/"
               rel="noreferrer"
               target="_blank"
@@ -193,7 +196,7 @@ export default function UsesPage() {
             </BaseTextLink>{' '}
             and his cool project -{' '}
             <BaseTextLink
-              className="after:-bottom-0.5"
+              className="dark:text-slate-100 after:-bottom-0.5"
               href="https://uses.tech/"
               rel="noreferrer"
               target="_blank"

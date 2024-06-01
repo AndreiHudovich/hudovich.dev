@@ -26,7 +26,10 @@ export default function ContactPage() {
         <div className="text-body-3 md:text-body-2">
           <p className="mb-3 md:mb-0">
             You can reach me out anytime at{' '}
-            <BaseTextLink className="font-medium" href={`mailto:${links.contact.email}`}>
+            <BaseTextLink
+              className="font-medium dark:text-slate-100"
+              href={`mailto:${links.contact.email}`}
+            >
               {links.contact.email}
             </BaseTextLink>
           </p>
@@ -34,7 +37,7 @@ export default function ContactPage() {
           <p className="mb-3">
             As a backup option, you can{' '}
             <BaseTextLink
-              className="font-medium"
+              className="font-medium dark:text-slate-100"
               href={links.contact.dm}
               rel="noreferrer"
               target="_blank"
