@@ -16,23 +16,6 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   description: 'The personal website of Andrei Hudovich, a freelance full stack engineer.',
-  manifest: '/manifest.webmanifest',
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-      sizes: '32x32',
-    },
-    {
-      rel: 'icon',
-      url: '/icon.svg',
-      type: 'image/svg+xml',
-    },
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-  ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -40,12 +23,6 @@ export const metadata: Metadata = {
     title: 'The personal website of Andrei Hudovich',
     description: 'A freelance full stack engineer.',
     url: '/',
-    images: {
-      url: `/open-graph.png`,
-      type: 'image/png',
-      width: 1920,
-      height: 1005,
-    },
   },
 }
 

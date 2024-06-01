@@ -279,7 +279,7 @@ export default function ResumePage() {
       <section className="mb-11 md:mb-14">
         <PageIntro
           heading="My Resume / CV"
-          text="I'm a highly skilled full-stack engineer with more than 8 years of experience in
+          text="I'm a highly skilled full stack engineer with more than 8 years of experience in
           building web applications. On this page, you can learn more about my knowledge stack and
           my previous work experience."
         />

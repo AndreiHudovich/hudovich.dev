@@ -3,10 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.0.0-beta.0",
-  "engines": {
-    "node": ">=20.11.1"
-  },
+  "packageManager": "pnpm@9.1.4",
   "scripts": {
     "prepare": "husky",
     "dev": "next dev",
@@ -26,6 +23,7 @@
     "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.2.2",
     "tua-body-scroll-lock": "^1.4.1"
   },
