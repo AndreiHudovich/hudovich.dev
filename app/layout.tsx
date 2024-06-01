@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { ThemeProvider } from 'next-themes'
 import { Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from '@/components/layout/Footer.tsx'
 import Header from '@/components/layout/Header.tsx'
 import { cn } from '@/utils/css.ts'
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
