@@ -2,6 +2,7 @@ import Container from '@/components/layout/Container.tsx'
 import PageIntro from '@/components/layout/PageIntro.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
+import { getCurrentDirName } from '@/utils/url.ts'
 import type { Metadata } from 'next'
 
 const data = [
@@ -79,6 +80,9 @@ const data = [
 
 export const metadata: Metadata = {
   title: 'Tech Stack | Andrei Hudovich',
+  alternates: {
+    canonical: `${getCurrentDirName(import.meta.url)}`,
+  },
 }
 
 export default function TechStackPage() {

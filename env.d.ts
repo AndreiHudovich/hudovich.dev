@@ -8,3 +8,9 @@ declare module '*.svg?url' {
   const Component: any
   export default Component
 }
+
+namespace NodeJS {
+  interface ProcessEnv {
+    NEXT_PUBLIC_BASE_URL: string
+  }
+}

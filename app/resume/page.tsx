@@ -8,6 +8,7 @@ import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
 import BaseTextLink from '@/components/ui/BaseTextLink.tsx'
 import { cn } from '@/utils/css.ts'
+import { getCurrentDirName } from '@/utils/url.ts'
 import type { Metadata } from 'next'
 
 const skillsData = [
@@ -267,6 +268,9 @@ const workHistoryData = [
 
 export const metadata: Metadata = {
   title: 'Resume | Andrei Hudovich',
+  alternates: {
+    canonical: `${getCurrentDirName(import.meta.url)}`,
+  },
 }
 
 export default function ResumePage() {

@@ -41,6 +41,9 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
 
 export const metadata: Metadata = {
   title: 'Andrei Hudovich',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function HomePage() {
