@@ -325,7 +325,11 @@ export default function ResumePage() {
             Below you will find a summary of my past employment experience. Additionally, if you
             require, you can{' '}
             <span className="inline-flex items-center gap-1.5">
-              <BaseTextLink className="font-medium" href="#" download={true}>
+              <BaseTextLink
+                className="font-medium"
+                href="/resume.pdf"
+                download="Andrei_Hudovich_-_Lead_Full_Stack_Engineer_-_Resume.pdf"
+              >
                 download my resume
               </BaseTextLink>
               <BaseIcon as={IconSolidFilePdf} className="translate-y-px size-4" />
