@@ -55,11 +55,12 @@ export default function HomePage() {
           I’m <span className="text-orange-500">Andrei Hudovich</span>!
         </h1>
 
-        {/* prettier-ignore */}
         <p className="mb-4 text-body-2 sm:max-w-xl md:mb-5 md:max-w-none md:text-body-1">
-          A freelance full stack engineer based in Wroclaw, Poland. I&nbsp;specialize in developing
-          applications using React ecosystem. Currently, I&apos;m&nbsp;leading the front-end team
-          at&nbsp;Propbar.
+          A freelance full stack engineer based in Wroclaw, Poland.{' '}
+          <br className="hidden md:block" />
+          I&nbsp;specialize in developing applications using React ecosystem.{' '}
+          <br className="hidden md:block" />
+          Currently, I&apos;m&nbsp;leading the front-end team at&nbsp;Propbar.
         </p>
 
         <BaseSeparator />
