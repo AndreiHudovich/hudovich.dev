@@ -66,8 +66,8 @@ const data = [
       },
       {
         label: 'Web Analytics',
-        value: 'Umami',
-        link: 'https://umami.is',
+        value: 'Vercel Analytics',
+        link: 'https://vercel.com/docs/analytics',
       },
       {
         label: 'Sources',
