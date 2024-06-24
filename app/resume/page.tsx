@@ -362,7 +362,7 @@ export default function ResumePage() {
                     <BaseTextLink
                       className="text-dark-blue-950 dark:text-slate-100 after:-bottom-0.5 md:after:bottom-0"
                       href={item.meta.company.link}
-                      rel="noreferrer"
+                      rel="noreferrer nofollow"
                       target="_blank"
                     >
                       {item.meta.company.name}
