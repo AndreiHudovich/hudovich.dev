@@ -1,10 +1,10 @@
 import '@/styles/globals.css'
 import { ThemeProvider } from 'next-themes'
 import { Outfit } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from '@/components/layout/Footer.tsx'
 import Header from '@/components/layout/Header.tsx'
+import VercelAnalytics from '@/components/VercelAnalytics.tsx'
 import { cn } from '@/utils/css.ts'
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="pt-8 pb-16 md:pt-16 md:pb-24">{children}</main>
           <Footer />
         </ThemeProvider>
-        <Analytics beforeSend={(event) => (localStorage.getItem('va-disable') ? null : event)} />
+        <VercelAnalytics />
         <SpeedInsights />
       </body>
     </html>
