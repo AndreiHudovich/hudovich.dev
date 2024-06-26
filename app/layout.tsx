@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="pt-8 pb-16 md:pt-16 md:pb-24">{children}</main>
           <Footer />
         </ThemeProvider>
-        <Analytics  />
+        <Analytics beforeSend={(event) => (localStorage.getItem('va-disable') ? null : event)} />
         <SpeedInsights />
       </body>
     </html>
