@@ -1,4 +1,6 @@
+.husky
 .next
+.vscode
 node_modules
 public
 dist
