@@ -3,6 +3,7 @@ import IconBrandsLinkedIn from '@/assets/icons/icon-brands-linkedin.svg'
 import IconBrandsReddit from '@/assets/icons/icon-brands-reddit.svg'
 import IconBrandsUpwork from '@/assets/icons/icon-brands-upwork.svg'
 import IconBrandsXTwitter from '@/assets/icons/icon-brands-x-twitter.svg'
+import IconSolidArrowUpRightFromSquare from '@/assets/icons/icon-solid-arrow-up-right-from-square.svg'
 import Container from '@/components/layout/Container.tsx'
 import BaseIcon from '@/components/ui/BaseIcon.tsx'
 import BaseSeparator from '@/components/ui/BaseSeparator.tsx'
@@ -64,6 +65,35 @@ export default function HomePage() {
         </p>
 
         <BaseSeparator />
+      </section>
+
+      <section className="mb-11 md:mb-14">
+        <h2 className="mb-4 font-semibold text-heading-4 dark:text-slate-100 md:mb-6 md:text-heading-3">
+          Projects
+        </h2>
+
+        <div className="grid gap-8">
+          <article>
+            <h3 className="mb-1 font-semibold text-heading-5 dark:text-slate-100">Listing Cat</h3>
+            <p className="mb-3 text-body-3 md:text-body-2">
+              A curated list of directories where you can submit your website to get more backlinks
+              and, as a result, boost your domain rating and get more traffic.
+            </p>
+            <a
+              className="inline-flex items-center gap-x-1.5 pb-1 font-medium text-body-3 dark:text-slate-100"
+              href="https://listingcat.com"
+              target="_blank"
+            >
+              <span className="relative transition-colors hover:dark:text-slate-100 after:inline-block after:absolute after:bottom-0 after:inset-x-0 after:h-px after:bg-orange-500 after:transition-[height] hover:after:h-[0.1875rem]">
+                Website
+              </span>
+              <BaseIcon
+                as={IconSolidArrowUpRightFromSquare}
+                className="size-4 text-dark-blue-950 transition-colors dark:text-slate-100 group-hover:text-dark-blue-950 dark:group-hover:text-white"
+              />
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="mb-11">
