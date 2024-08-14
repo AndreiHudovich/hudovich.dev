@@ -17,6 +17,10 @@ const textLinks: Array<{ href: Route; label: string }> = [
     href: '/tech-stack',
     label: 'Tech Stack',
   },
+  {
+    href: '/profiles',
+    label: 'Profiles',
+  },
 ]
 
 const iconLinks: Array<{
