@@ -26,6 +26,10 @@ const pages: Array<{ url: Route | null; priority: number }> = [
     url: '/uses',
     priority: 0.7,
   },
+  {
+    url: '/profiles',
+    priority: 0.7,
+  },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
