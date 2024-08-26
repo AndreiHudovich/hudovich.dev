@@ -1,10 +1,10 @@
 import '@/styles/globals.css'
+import PlausibleProvider from 'next-plausible'
 import { ThemeProvider } from 'next-themes'
 import { Outfit } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from '@/components/layout/Footer.tsx'
 import Header from '@/components/layout/Header.tsx'
-import VercelAnalytics from '@/components/VercelAnalytics.tsx'
 import { cn } from '@/utils/css.ts'
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
@@ -35,13 +35,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={cn(outfit.variable, 'h-full')} suppressHydrationWarning={true}>
+      <head>
+        <PlausibleProvider
+          domain="hudovich.dev"
+          trackOutboundLinks={true}
+          trackFileDownloads={true}
+        />
+      </head>
+
       <body className="h-full min-h-full bg-white font-[350] text-dark-blue-950 antialiased dark:bg-blue-950 dark:text-slate-300">
         <ThemeProvider disableTransitionOnChange={true}>
           <Header />
           <main className="pt-8 pb-16 md:pt-16 md:pb-24">{children}</main>
           <Footer />
         </ThemeProvider>
-        <VercelAnalytics />
         <SpeedInsights />
       </body>
     </html>

@@ -66,8 +66,8 @@ const data = [
       },
       {
         label: 'Web Analytics',
-        value: 'Vercel Analytics',
-        link: 'https://vercel.com/docs/analytics',
+        value: 'Plausible',
+        link: 'https://plausible.io/',
       },
       {
         label: 'Sources',
