@@ -10,10 +10,6 @@ import type { Route } from 'next'
 
 const textLinks: Array<{ href: Route; label: string }> = [
   {
-    href: '/uses',
-    label: 'Uses',
-  },
-  {
     href: '/tech-stack',
     label: 'Tech Stack',
   },
