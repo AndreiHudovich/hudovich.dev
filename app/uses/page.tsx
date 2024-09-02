@@ -30,7 +30,6 @@ const data = [
       {
         label: 'Speakers',
         value: 'Audioengine A1 Wireless',
-        link: 'https://audioengineeu.com/products/audioengine-a1-mr-bluetooth-bookshelf-speakers-powered-bluetooth-stereo-speakers-for-home-surround-sound-system-includes-aux-inputs-for-pc-speakers-turntable-speakers-and-subwoofer-pair-grey',
       },
       {
         label: 'Mouse',
@@ -135,6 +134,19 @@ const data = [
   },
 ]
 
+const indieData = [
+  {
+    label: 'I grow my X audience with',
+    value: 'Typefully',
+    link: 'https://typefully.com/?via=andrei-hudovich',
+  },
+  {
+    label: 'I make beautiful screenshots with',
+    value: 'CleanShot X',
+    link: 'https://cleanshot.sjv.io/c/5694228/1735809/19944',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Uses | Andrei Hudovich',
   alternates: {
@@ -150,7 +162,33 @@ export default function UsesPage() {
         <BaseSeparator />
       </section>
 
-      <section className="grid gap-5 md:grid-cols-2 md:gap-6">
+      <section className="mb-5 px-6 pt-4 pb-6 bg-orange-500/15 rounded-xl dark:bg-dark-blue-950/50 md:mb-6">
+        <h2 className="mb-3 font-semibold text-heading-5 dark:text-slate-100 md:text-heading-4">
+          My indie hacking tools :)
+        </h2>
+
+        <ul className="grid gap-y-3 md:gap-y-1.5">
+          {indieData.map(({ label, link, value }) => (
+            <li key={label} className="font-medium text-caption md:text-body-3">
+              <span className="dark:text-slate-100">{label}</span>{' '}
+              {link ? (
+                <BaseTextLink
+                  className="font-[375] md:font-[350]"
+                  href={link}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {value}
+                </BaseTextLink>
+              ) : (
+                <span className="font-[375] md:font-[350]">{value}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         {data.map(({ heading, list }) => (
           <section
             key={heading}
@@ -205,7 +243,7 @@ export default function UsesPage() {
             </BaseTextLink>
           </small>
         </p>
-      </section>
+      </div>
     </Container>
   )
 }

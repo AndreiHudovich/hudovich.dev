@@ -12,6 +12,10 @@ const links: Array<{ href: Route; label: string }> = [
     label: 'Resume',
   },
   {
+    href: '/uses',
+    label: 'Uses',
+  },
+  {
     href: '/contact',
     label: 'Contact',
   },
@@ -34,7 +38,7 @@ function InternalLinks({ onClick, ...props }: InternalLinksProps) {
           >
             <Link
               className={cn(
-                'relative block px-3 py-2 text-dark-blue-950 after:absolute after:inset-x-3 after:bottom-0 after:h-[0.1875rem] after:bg-orange-500 after:opacity-0 after:transition-opacity hover:after:opacity-100 dark:text-slate-100 md:px-2 md:py-1.5 md:after:inset-x-2',
+                'relative block px-3 py-2 tracking-wide text-dark-blue-950 after:absolute after:inset-x-3 after:bottom-0 after:h-[0.1875rem] after:bg-orange-500 after:opacity-0 after:transition-opacity hover:after:opacity-100 dark:text-slate-100 md:px-2 md:py-1.5 md:after:inset-x-2',
                 href === pathname && 'md:after:opacity-100'
               )}
               href={href}
