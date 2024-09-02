@@ -19,11 +19,6 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
     Icon: IconBrandsXTwitter,
   },
   {
-    href: links.social.github,
-    label: 'GitHub',
-    Icon: IconBrandsGithub,
-  },
-  {
     href: links.social.reddit,
     label: 'Reddit',
     Icon: IconBrandsReddit,
@@ -32,6 +27,11 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
     href: links.social.linkedin,
     label: 'LinkedIn',
     Icon: IconBrandsLinkedIn,
+  },
+  {
+    href: links.social.github,
+    label: 'GitHub',
+    Icon: IconBrandsGithub,
   },
   {
     href: links.social.upwork,
