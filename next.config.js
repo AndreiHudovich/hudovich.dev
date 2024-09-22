@@ -1,4 +1,4 @@
-import { withPlausibleProxy } from 'next-plausible'
+// import { withPlausibleProxy } from 'next-plausible'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -41,6 +41,8 @@ const nextConfig = {
   },
 }
 
-export default withPlausibleProxy({
-  customDomain: 'https://plausible.hudovich.dev',
-})(nextConfig)
+export default nextConfig
+
+// export default withPlausibleProxy({
+//   customDomain: 'https://plausible.hudovich.dev',
+// })(nextConfig)
