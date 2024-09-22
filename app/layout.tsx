@@ -36,9 +36,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={cn(outfit.variable, 'h-full')} suppressHydrationWarning={true}>
       <head>
-        {/* customDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN} */}
         <PlausibleProvider
           domain="hudovich.dev"
+          customDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN}
           selfHosted={true}
           trackOutboundLinks={true}
           trackFileDownloads={true}
