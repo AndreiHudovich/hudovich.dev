@@ -41,4 +41,6 @@ const nextConfig = {
   },
 }
 
-export default withPlausibleProxy()(nextConfig)
+export default withPlausibleProxy({
+  customDomain: 'https://plausible.hudovich.dev',
+})(nextConfig)
