@@ -11,6 +11,7 @@ declare module '*.svg?url' {
 
 namespace NodeJS {
   interface ProcessEnv {
+    NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN: string
     NEXT_PUBLIC_BASE_URL: string
   }
 }
