@@ -38,7 +38,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <PlausibleProvider
           domain="hudovich.dev"
-          selfHosted={true}
           trackOutboundLinks={true}
           trackFileDownloads={true}
         />
