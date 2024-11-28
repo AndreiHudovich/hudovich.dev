@@ -115,6 +115,26 @@ export default function HomePage() {
               />
             </a>
           </article>
+
+          <article>
+            <h3 className="mb-1 font-semibold text-heading-5 dark:text-slate-100">Bluesky Meter</h3>
+            <p className="mb-3 text-body-3 md:text-body-2">
+              Enjoyable Bluesky analytics with posting streak!
+            </p>
+            <a
+              className="inline-flex items-center gap-x-1.5 pb-1 font-medium text-body-3 dark:text-slate-100"
+              href="https://blueskymeter.com"
+              target="_blank"
+            >
+              <span className="relative transition-colors hover:dark:text-slate-100 after:inline-block after:absolute after:bottom-0 after:inset-x-0 after:h-px after:bg-orange-500 after:transition-[height] hover:after:h-[0.1875rem]">
+                Get your Bluesky Analytics
+              </span>
+              <BaseIcon
+                as={IconSolidArrowUpRightFromSquare}
+                className="size-4 text-dark-blue-950 transition-colors dark:text-slate-100 group-hover:text-dark-blue-950 dark:group-hover:text-white"
+              />
+            </a>
+          </article>
         </div>
       </section>
 
