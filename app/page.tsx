@@ -1,7 +1,8 @@
+import IconBrandsBluesky from '@/assets/icons/icon-brands-bluesky.svg'
 import IconBrandsGithub from '@/assets/icons/icon-brands-github.svg'
 import IconBrandsLinkedIn from '@/assets/icons/icon-brands-linkedin.svg'
 import IconBrandsReddit from '@/assets/icons/icon-brands-reddit.svg'
-import IconBrandsUpwork from '@/assets/icons/icon-brands-upwork.svg'
+// import IconBrandsUpwork from '@/assets/icons/icon-brands-upwork.svg'
 import IconBrandsXTwitter from '@/assets/icons/icon-brands-x-twitter.svg'
 import IconSolidArrowUpRightFromSquare from '@/assets/icons/icon-solid-arrow-up-right-from-square.svg'
 import Container from '@/components/layout/Container.tsx'
@@ -19,6 +20,11 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
     Icon: IconBrandsXTwitter,
   },
   {
+    href: links.social.bluesky,
+    label: 'Bluesky',
+    Icon: IconBrandsBluesky,
+  },
+  {
     href: links.social.reddit,
     label: 'Reddit',
     Icon: IconBrandsReddit,
@@ -33,11 +39,11 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
     label: 'GitHub',
     Icon: IconBrandsGithub,
   },
-  {
-    href: links.social.upwork,
-    label: 'Upwork',
-    Icon: IconBrandsUpwork,
-  },
+  // {
+  //   href: links.social.upwork,
+  //   label: 'Upwork',
+  //   Icon: IconBrandsUpwork,
+  // },
 ]
 
 export const metadata: Metadata = {
