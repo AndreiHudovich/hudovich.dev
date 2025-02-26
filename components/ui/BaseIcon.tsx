@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import { cn } from '@/utils/css.ts'
 import type { ComponentPropsWithRef, FC, SVGProps } from 'react'
 
@@ -8,23 +7,21 @@ interface BaseIconProps extends ComponentPropsWithRef<'svg'> {
   className?: string
 }
 
-const BaseIcon = forwardRef<HTMLSpanElement, BaseIconProps>(
-  ({ as, className, label, ...props }, forwardedRef) => {
-    const Component = as
+function BaseIcon({ as, className, label, ...props }: BaseIconProps) {
+  const Component = as
 
-    return (
-      <span ref={forwardedRef} className={cn('grid', className)}>
-        {label && <span className="sr-only">{label}</span>}
-        <Component
-          className="size-full fill-current"
-          aria-hidden={true}
-          focusable={false}
-          {...props}
-        />
-      </span>
-    )
-  }
-)
+  return (
+    <span className={cn('grid', className)}>
+      {label && <span className="sr-only">{label}</span>}
+      <Component
+        className="size-full fill-current"
+        aria-hidden={true}
+        focusable={false}
+        {...props}
+      />
+    </span>
+  )
+}
 
 BaseIcon.displayName = 'BaseIcon'
 

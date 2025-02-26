@@ -1,5 +1,6 @@
 import IconBrandsBluesky from '@/assets/icons/icon-brands-bluesky.svg'
 import IconBrandsGithub from '@/assets/icons/icon-brands-github.svg'
+import IconBrandsInstagram from '@/assets/icons/icon-brands-instagram.svg'
 import IconBrandsLinkedIn from '@/assets/icons/icon-brands-linkedin.svg'
 import IconBrandsReddit from '@/assets/icons/icon-brands-reddit.svg'
 // import IconBrandsUpwork from '@/assets/icons/icon-brands-upwork.svg'
@@ -38,6 +39,11 @@ const linksList: Array<{ href: string; label: string; Icon: FC<SVGProps<SVGEleme
     href: links.social.github,
     label: 'GitHub',
     Icon: IconBrandsGithub,
+  },
+  {
+    href: links.social.instagram,
+    label: 'Instagram',
+    Icon: IconBrandsInstagram,
   },
   // {
   //   href: links.social.upwork,
